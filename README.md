@@ -1061,11 +1061,11 @@ JavaScript has various types of values, including:
 Example:
 
 ```javascript
-var num = 42; // Number
-var text = "hello"; // String
-var isActive = false; // Boolean
-var obj = {}; // Object
-var arr = [1, 2, 3]; // Array
+let num = 42; // Number
+let text = "hello"; // String
+let isActive = false; // Boolean
+let obj = {}; // Object
+let arr = [1, 2, 3]; // Array
 ```
 
 ### Type Conversion
@@ -1078,21 +1078,21 @@ Example of implicit conversion: When you add a number and a string, JavaScript
 converts the number to a string and concatenates them.
 
 ```javascript
-var result = 5 + "7"; // "57" as a string, not 12
+let result = 5 + "7"; // "57" as a string, not 12
 ```
 
 Using `parseInt()` to parse an integer from a floating-point number string:
 
 ```javascript
-var numberString = "3.14";
-var integerNumber = parseInt(numberString); // 3
+let numberString = "3.14";
+let integerNumber = parseInt(numberString); // 3
 ```
 
 Using `parseFloat()` to parse a floating-point number from a string:
 
 ```javascript
-var numberString = "3.14";
-var floatNumber = parseFloat(numberString); // 3.14
+let numberString = "3.14";
+let floatNumber = parseFloat(numberString); // 3.14
 ```
 
 ### Operators
@@ -1106,14 +1106,14 @@ var floatNumber = parseFloat(numberString); // 3.14
 Example:
 
 ```javascript
-var x = 10;
-var y = 5;
+let x = 10;
+let y = 5;
 
 // Unary
-var negativeX = -x; // -10
+let negativeX = -x; // -10
 
 // Binary
-var sum = x + y; // 15
+let sum = x + y; // 15
 ```
 
 ### Modifying Variables in Place
@@ -1127,7 +1127,7 @@ You can modify variables in place using various operators:
 Example:
 
 ```javascript
-var counter = 0;
+let counter = 0;
 counter++; // Increment by 1
 counter--; // Decrement by 1
 counter += 5; // Increase by 5
@@ -1144,7 +1144,7 @@ Comparison operators are used to compare values:
 Example:
 
 ```javascript
-var age = 30;
+let age = 30;
 
 if (age >= 18) {
   console.log("Adult");
@@ -1165,7 +1165,7 @@ Conditionals are used to make decisions in code:
 Example:
 
 ```javascript
-var score = 85;
+let score = 85;
 
 if (score >= 90) {
   console.log("A");
@@ -1189,12 +1189,12 @@ Example:
 
 ```javascript
 // for loop
-for (var i = 0; i < 5; i++) {
+for (let i = 0; i < 5; i++) {
   console.log(i); // 0, 1, 2, 3, 4
 }
 
 // while loop
-var j = 0;
+let j = 0;
 while (j < 5) {
   console.log(j); // 0, 1, 2, 3, 4
   j++;
@@ -1215,11 +1215,11 @@ Example:
 
 ```javascript
 function add(a, b) {
-  var sum = a + b;
+  let sum = a + b;
   return sum;
 }
 
-var result = add(5, 10); // 15
+let result = add(5, 10); // 15
 console.log(result); // 15
 ```
 
@@ -1236,19 +1236,19 @@ Arrays are used to store multiple values in a single variable:
 Example:
 
 ```javascript
-var numbers = [1, 2, 3, 4, 5];
+let numbers = [1, 2, 3, 4, 5];
 
 // Length
 console.log(numbers.length); // 5
 
 // Filtering
-var evenNumbers = numbers.filter(function (num) {
+let evenNumbers = numbers.filter(function (num) {
   return num % 2 === 0;
 });
 console.log(evenNumbers); // [2, 4]
 
 // Mapping
-var squares = numbers.map(function (num) {
+let squares = numbers.map(function (num) {
   return num * num;
 });
 console.log(squares); // [1, 4, 9, 16, 25]
@@ -1405,7 +1405,7 @@ function User(name, age) {
   this.age = age;
 }
 
-var user = new User("John", 30);
+let user = new User("John", 30);
 
 console.log(user.name); // Output: "John"
 console.log(user.age); // Output: 30
