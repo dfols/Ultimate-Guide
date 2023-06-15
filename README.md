@@ -773,59 +773,239 @@ you want to create space between different elements.
 }
 ```
 
-### Flexbox
+## Flexbox
 
-Flexbox is a layout model that allows elements within a parent container to be
-automatically arranged dynamically according to size and screen space.
+CSS Flexbox, or Flexible Box Module, is a one-dimensional layout model that
+allows you to design flexible and responsive layouts with ease.
 
-- **Display**: To use flexbox, you need to set the parent element's display
-  property to flex.
+### What is CSS Flexbox?
 
-  ```css
-  .flex-container {
-    display: flex;
-  }
-  ```
+CSS Flexbox is a layout model designed for arranging items within a container in
+a way that they can adjust their size and position to best utilize the available
+space. It is particularly useful for building responsive designs and is a
+powerful tool for aligning elements within a container.
 
-- **Justify Content**: Aligns content horizontally.
+### Benefits
 
-  ```css
-  .flex-container {
-    justify-content: center;
-  }
-  ```
+- Flexibility: Automatically adjust the size of elements to fill the available
+  space.
+- Alignment Control: Easily vertically center elements, which was difficult
+  before Flexbox.
+- Responsiveness: Build designs that adapt to different screen sizes without
+  complex code.
 
-- **Align Items**: Aligns items vertically within a container.
+### Flex Container
 
-  ```css
-  .flex-container {
-    align-items: center;
-  }
-  ```
-
-- **Flex Direction**: Sets the direction of the flex items.
-
-  ```css
-  .flex-container {
-    flex-direction: row | row-reverse | column | column-reverse;
-  }
-  ```
-
-### Grid
-
-CSS Grid is a layout system that lets you design complex layouts by placing
-elements into rows and columns.
+To create a flex container, use the `display` property and set it to `flex`.
 
 ```css
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 10px;
+.container {
+  display: flex;
+}
+```
+
+You can control the direction of the flex items by setting the `flex-direction`
+property.
+
+```css
+.container {
+  flex-direction: row | row-reverse | column | column-reverse;
+}
+```
+
+### Flex Items
+
+Flex items are the direct children of the flex container. You can control their
+order and alignment within the container.
+
+```css
+.item {
+  order: 2; /* Adjust the order */
+  align-self: center; /* Align this item vertically in the center */
+}
+```
+
+### Main Axis and Cross Axis
+
+In a flex container, the main axis is the primary axis along which the flex
+items are laid out, and the cross axis is perpendicular to it.
+
+- Use `justify-content` to align items along the main axis.
+
+```css
+.container {
+  justify-content: center | flex-start | flex-end | space-between | space-around;
+}
+```
+
+- Use `align-items` and `align-self` to align items along the cross axis.
+
+```css
+.container {
+  align-items: center | flex-start | flex-end | stretch | baseline;
+}
+```
+
+### Flex Wrapping and Line Wrapping
+
+Control how flex items wrap within the container using the `flex-wrap` property.
+
+```css
+.container {
+  flex-wrap: nowrap | wrap | wrap-reverse;
+}
+```
+
+### Flexbox Alignment
+
+Use `align-content` to align items within flex lines and distribute extra space
+among flex items with `flex-grow` and `flex-shrink`.
+
+```css
+.container {
+  align-content: center | flex-start | flex-end | space-between | space-around |
+    stretch;
 }
 
-.grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px;
+.item {
+  flex-grow: 2; /* Item will take up twice as much space as other items */
+  flex-shrink: 1; /* Item can shrink if needed */
+}
+```
+
+## Grid
+
+CSS Grid is a powerful layout system that lets you create two-dimensional
+layouts for web pages. With Grid, you can control both columns and rows, making
+complex designs easier to achieve.
+
+### What is CSS Grid?
+
+CSS Grid is a layout model that allows developers to create complex responsive
+web design layouts with ease. It excels at dividing a page into major regions or
+defining the relationship in terms of size, position, and layer between parts of
+the content.
+
+### Benefits
+
+- Precision: Provides precise control over the layout, irrespective of the
+  screen size.
+- Simplicity: Simplifies complex layouts that would be tough and hacky to
+  achieve using other layout models.
+- Flexibility: Easily create responsive designs without relying on external
+  libraries like Bootstrap.
+
+### Defining a Grid
+
+To define an element as a grid container, use the `display` property and set it
+to `grid`.
+
+```css
+.container {
+  display: grid;
+}
+```
+
+### Grid Template (Columns and Rows)
+
+Using `grid-template-columns` and `grid-template-rows`, you can define the size
+of the columns and rows of your grid.
+
+```css
+.container {
+  grid-template-columns: 100px 200px 100px;
+  grid-template-rows: 50px 50px;
+}
+```
+
+### FR Unit
+
+The `fr` unit represents a fraction of the available space in the grid
+container. It is useful for creating responsive designs.
+
+```css
+.container {
+  grid-template-columns: 1fr 2fr;
+}
+```
+
+### Gaps Between Tracks
+
+Use `gap`, `row-gap`, and `column-gap` to control the spacing between grid
+cells.
+
+```css
+.container {
+  gap: 10px;
+  row-gap: 20px;
+  column-gap: 20px;
+}
+```
+
+### Repeating Track Listings
+
+The `repeat()` function can be used to repeat the size of columns or rows
+multiple times.
+
+```css
+.container {
+  grid-template-columns: repeat(3, 100px);
+}
+```
+
+### Minmax Function
+
+The `minmax()` function defines a size range for grid tracks, allowing them to
+have a minimum and maximum size.
+
+```css
+.container {
+  grid-template-columns: minmax(100px, 1fr);
+}
+```
+
+### Line-Based Placement
+
+You can place grid items by referring to the lines that separate the grid
+tracks, using `grid-column-start`, `grid-column-end`, `grid-row-start`, and
+`grid-row-end`.
+
+```css
+.item {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+```
+
+### Positioning (Grid Template Areas)
+
+You can define areas in your grid and place items in these named areas, making
+it easier to understand how the layout is formed.
+
+```css
+.container {
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer";
+}
+
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.content {
+  grid-area: content;
+}
+
+.footer {
+  grid-area: footer;
 }
 ```
 
