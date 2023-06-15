@@ -38,7 +38,6 @@
 - [Forms and Inputs](#forms-and-inputs)
 - [Labels](#labels)
 - [Tables](#tables)
-
 - [Block and Inline Elements](#block-and-inline-elements)
 
 ### [CSS](#css)
@@ -46,12 +45,11 @@
 - [What is CSS?](#what-is-css)
 - [Why Should I Learn CSS?](#why-should-i-learn-css)
 - [How to Apply Styles](#how-to-apply-styles)
-- [CSS Selectors](#css-selectors)
-- [Specificity](#specificity)
-- [CSS Box Model](#css-box-model)
-- [CSS Positioning](#css-positioning)
+- [Selectors](#selectors)
+- [Common CSS Properties](#common-css-properties)
+- [Box Model](#box-model)
 - [Flexbox](#flexbox)
-- [CSS Grid](#css-grid)
+- [Grid](#grid)
 - [Media Queries](#media-queries)
 
 ### [JavaScript](#javascript)
@@ -643,7 +641,7 @@ CSS is essential for web development because it provides the styling and
 aesthetic aspects of a webpage. It makes websites visually appealing and
 improves the user experience.
 
-### Where to Put CSS
+### How to Apply Styles
 
 - **Inline**: Directly within an HTML element using the `style` attribute.
 
@@ -669,7 +667,7 @@ improves the user experience.
   <link rel="stylesheet" href="styles.css" />
   ```
 
-### Selectors and Specificity
+### Selectors
 
 - **Selectors**: Selectors are patterns that match against elements in an HTML
   document, used to apply styles.
