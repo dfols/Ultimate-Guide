@@ -4,10 +4,9 @@
 
 - [Introduction](#introduction)
 - [How To Use This Guide](#how-to-use-this-guide)
-- [Prerequisites](#prerequisites)
 - [Installation](#installation)
 
-### Command Line Interface (CLI)
+### [Command Line Interface (CLI)](#command-line-interface-cli)
 
 - [What is CLI?](#what-is-cli)
 - [Why Should I Learn Command Line?](#why-should-i-learn-command-line)
@@ -15,7 +14,7 @@
 - [Common Commands](#common-commands)
 - [Creating Directories and Files](#creating-directories-and-files)
 
-### Git
+### [Git](#git)
 
 - [What is Git?](#what-is-git)
 - [Why Should I Learn Git?](#why-should-i-learn-git)
@@ -23,7 +22,7 @@
 - [Basic Git Commands](#basic-git-commands)
 - [Git Branches and Origin](#git-branches-and-origin)
 
-### HTML
+### [HTML](#html)
 
 - [What is HTML?](#what-is-html)
 - [Why Should I Learn HTML?](#why-should-i-learn-html)
@@ -37,7 +36,7 @@
 - [Semantic HTML](#semantic-html)
 - [Block and Inline Elements](#block-and-inline-elements)
 
-### CSS
+### [CSS](#css)
 
 - [What is CSS?](#what-is-css)
 - [Why Should I Learn CSS?](#why-should-i-learn-css)
@@ -50,7 +49,7 @@
 - [CSS Grid](#css-grid)
 - [Media Queries](#media-queries)
 
-### JavaScript
+### [JavaScript](#javascript)
 
 - [What is JavaScript?](#what-is-javascript)
 - [Why Should I Learn JavaScript?](#why-should-i-learn-javascript)
@@ -66,6 +65,45 @@
 - [Objects](#objects)
 - [Arrow Functions](#arrow-functions)
 - [Constructor and "new" Operator](#constructor-and-new-operator)
+
+### Introduction
+
+Welcome to the Ultimate Guide! This guide covers the basics of Command Line
+Interface (CLI), HTML, CSS, JavaScript, and Git, providing you with the
+foundational knowledge needed to start building websites and managing code
+repositories.
+
+### How To Use This Guide
+
+This guide is structured into sections, each focusing on a different aspect of
+web development. It is recommended that you follow the guide in order,
+especially if you are new to these concepts. However, if you are already
+familiar with some topics, feel free to jump to the sections that interest you
+the most. Each section will have explanations accompanied by code examples and
+best practices to help you understand the concepts better.
+
+### Installation
+
+Before we start, let's make sure you have all the necessary software installed:
+
+1. **Text Editor**: Download and install a text editor of your choice. Visual
+   Studio Code is highly recommended for its extensive features and community
+   support.
+
+2. **Git**: Git is essential for version control. You can download it from the
+   [official website](https://git-scm.com/downloads). Follow the instructions
+   for your operating system.
+
+3. **Node.js (Optional for JavaScript)**: If you plan on diving deep into
+   JavaScript, it’s good to have Node.js installed. This allows you to run
+   JavaScript code outside of the browser. You can download it from the
+   [official website](https://nodejs.org/en/download/).
+
+4. **Web Browser**: Make sure you have a modern web browser installed. This will
+   be necessary for viewing your HTML and CSS in action.
+
+Once you have these tools installed, you're ready to dive into the exciting
+world of web development!
 
 ### Command Line Interface (CLI)
 
