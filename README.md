@@ -808,14 +808,14 @@ you want to create space between different elements.
 CSS Flexbox, or Flexible Box Module, is a one-dimensional layout model that
 allows you to design flexible and responsive layouts with ease.
 
-### What is CSS Flexbox?
+#### What is CSS Flexbox?
 
 CSS Flexbox is a layout model designed for arranging items within a container in
 a way that they can adjust their size and position to best utilize the available
 space. It is particularly useful for building responsive designs and is a
 powerful tool for aligning elements within a container.
 
-### Benefits
+#### Benefits
 
 - Flexibility: Automatically adjust the size of elements to fill the available
   space.
