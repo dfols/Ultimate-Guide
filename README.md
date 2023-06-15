@@ -135,68 +135,91 @@ with your computer using text-based commands.
 
 ### Common Commands
 
-- `cd`: Change Directory. Use this to navigate through directories.
-  ```sh
-  cd Documents
-  ```
-- `ls`: List files and directories. Use this to view the contents of a
-  directory.
-  ```sh
-  ls
-  ```
-- `pwd`: Print Working Directory - shows the current directory path.
-  ```sh
-  pwd
-  ```
-- `mkdir`: Make a directory. Use this to create a new directory.
-  ```sh
-  mkdir my_directory
-  ```
-- `rmdir`: Remove an empty directory. Use this to delete an empty directory.
-  ```sh
-  rmdir my_empty_directory
-  ```
-- `rm`: Remove files or directories. Use this to delete files or directories.
-  ```sh
-  rm file.txt
-  ```
-- `cp`: Copy files or directories. Use this to create a copy of files or
-  directories.
-  ```sh
-  cp source.txt destination.txt
-  ```
-- `mv`: Move files or directories. Use this to move files or directories to a
-  new location.
-  ```sh
-  mv file.txt my_directory/
-  ```
-- `echo`: Display a line of text. Useful for printing messages.
-  ```sh
-  echo "Hello, World!"
-  ```
-- `cat`: Display the content of files. Use this to read the contents of a file.
-  ```sh
-  cat file.txt
-  ```
-- `grep`: Search for a specific pattern within a file. Useful for searching
-  within files.
-  ```sh
-  grep "hello" file.txt
-  ```
-- `sudo`: Execute a command with superuser permissions.
-  ```sh
-  sudo apt-get update
-  ```
-- `man`: Display the user manual for a command. Useful to get more information
-  about a command.
-  ```sh
-  man ls
-  ```
+`cd`: Change Directory. Use this to navigate through directories.
+
+```sh
+cd Documents
+```
+
+`ls`: List files and directories. Use this to view the contents of a directory.
+
+```sh
+ls
+```
+
+`pwd`: Print Working Directory - shows the current directory path.
+
+```sh
+pwd
+```
+
+`mkdir`: Make a directory. Use this to create a new directory.
+
+```sh
+mkdir my_directory
+```
+
+`rmdir`: Remove an empty directory. Use this to delete an empty directory.
+
+```sh
+rmdir my_empty_directory
+```
+
+`rm`: Remove files or directories. Use this to delete files or directories.
+
+```sh
+rm file.txt
+```
+
+`cp`: Copy files or directories. Use this to create a copy of files or
+directories.
+
+```sh
+cp source.txt destination.txt
+```
+
+`mv`: Move files or directories. Use this to move files or directories to a new
+location.
+
+```sh
+mv file.txt my_directory/
+```
+
+`echo`: Display a line of text. Useful for printing messages.
+
+```sh
+echo "Hello, World!"
+```
+
+`cat`: Display the content of files. Use this to read the contents of a file.
+
+```sh
+cat file.txt
+```
+
+`grep`: Search for a specific pattern within a file. Useful for searching within
+files.
+
+```sh
+grep "hello" file.txt
+```
+
+`sudo`: Execute a command with superuser permissions.
+
+```sh
+sudo apt-get update
+```
+
+`man`: Display the user manual for a command. Useful to get more information
+about a command.
+
+```sh
+man ls
+```
 
 ### Understanding `.` and `..`
 
-- `.` represents the current directory.
-- `..` represents the parent directory.
+`.` represents the current directory. `..` represents the parent directory.
 
 These can be used in combination with the `cd` command for navigating
 directories. For example, `cd ..` moves you up one directory, and `cd .` does
@@ -239,15 +262,18 @@ versions if needed.
 
 ### Git vs. GitHub
 
-- **Git**:
-  - It is a version control system.
-  - You can use Git locally on your computer.
-  - Git helps you manage the history and collaboration of your code.
-- **GitHub**:
-  - GitHub is a web-based platform.
-  - You can host your Git repositories online on GitHub.
-  - It provides additional features like Pull Requests, Issues, and a web-based
-    interface for repository management.
+**Git**:
+
+- It is a version control system.
+- You can use Git locally on your computer.
+- Git helps you manage the history and collaboration of your code.
+
+**GitHub**:
+
+- GitHub is a web-based platform.
+- You can host your Git repositories online on GitHub.
+- It provides additional features like Pull Requests, Issues, and a web-based
+  interface for repository management.
 
 While Git is essential for version control, GitHub adds an extra layer of
 functionality, particularly for collaboration across teams and the open-source
@@ -255,78 +281,78 @@ community.
 
 ### Basic Git Commands with Examples
 
-- **`git init`**: Initialize a new Git repository. This command creates a new
-  `.git` directory in your project to track the repository's metadata and object
-  database.
+**`git init`**: Initialize a new Git repository. This command creates a new
+`.git` directory in your project to track the repository's metadata and object
+database.
 
-  ```sh
-  git init
-  ```
+```sh
+git init
+```
 
-- **`git add`**: Stage changes for commit. This tells Git that you want to
-  include the updates to a particular file in the next commit.
+**`git add`**: Stage changes for commit. This tells Git that you want to include
+the updates to a particular file in the next commit.
 
-  ```sh
-  git add filename
-  ```
+```sh
+git add filename
+```
 
-  To add everything in the directory:
+To add everything in the directory:
 
-  ```sh
-  git add .
-  ```
+```sh
+git add .
+```
 
-- **`git commit`**: Commit staged changes. This captures a snapshot of the
-  project’s currently staged changes.
+**`git commit`**: Commit staged changes. This captures a snapshot of the
+project’s currently staged changes.
 
-  ```sh
-  git commit -m "Your commit message here"
-  ```
+```sh
+git commit -m "Your commit message here"
+```
 
-- **`git push`**: Push commits to a remote repository. This sends the committed
-  changes to a remote repository like GitHub.
+**`git push`**: Push commits to a remote repository. This sends the committed
+changes to a remote repository like GitHub.
 
-  ```sh
-  git push origin main
-  ```
+```sh
+git push origin main
+```
 
-  Here, `origin` is the default name Git gives to the server you cloned from,
-  and `main` is the branch you are pushing to.
+Here, `origin` is the default name Git gives to the server you cloned from, and
+`main` is the branch you are pushing to.
 
-- **`git pull`**: Fetch and integrate changes from a remote repository. This
-  command is used to fetch changes from the remote repo and merge it into the
-  current branch.
+**`git pull`**: Fetch and integrate changes from a remote repository. This
+command is used to fetch changes from the remote repo and merge it into the
+current branch.
 
-  ```sh
-  git pull origin main
-  ```
+```sh
+git pull origin main
+```
 
-- **`git branch`**: List, create, or delete branches. This command allows you to
-  work with branches.
+**`git branch`**: List, create, or delete branches. This command allows you to
+work with branches.
 
-  To list branches:
+To list branches:
 
-  ```sh
-  git branch
-  ```
+```sh
+git branch
+```
 
-  To create a new branch:
+To create a new branch:
 
-  ```sh
-  git branch new-branch
-  ```
+```sh
+git branch new-branch
+```
 
-  To delete a branch:
+To delete a branch:
 
-  ```sh
-  git branch -d branch-name
-  ```
+```sh
+git branch -d branch-name
+```
 
-  To switch to a different branch:
+To switch to a different branch:
 
-  ```sh
-  git checkout branch-name
-  ```
+```sh
+git checkout branch-name
+```
 
 ### Working with Branches
 
@@ -338,7 +364,11 @@ Example:
 
 ```sh
 git checkout -b feature-branch   # Create and switch to a new branch named "feature-branch"
-# Make changes and commit them
+
+touch file  # Make changes
+git add . # Stage
+git commit -m "message" # Commit
+
 git checkout main                # Switch back to the main branch
 git merge feature-branch         # Merge the feature branch into the main branch
 ```
@@ -392,19 +422,19 @@ An HTML document has a specific structure that includes `<!DOCTYPE html>`,
 
 ### Inline vs Block Elements
 
-- **Inline Elements**: Do not start on a new line and only take up as much width
-  as necessary. Example: `<span>`, `<a>`.
+**Inline Elements**: Do not start on a new line and only take up as much width
+as necessary. Example: `<span>`, `<a>`.
 
-  ```html
-  This is <span>inline</span> element.
-  ```
+```html
+This is <span>inline</span> element.
+```
 
-- **Block Elements**: Start on a new line and take up the full width available.
-  Example: `<div>`, `<h1>`, `<p>`.
+**Block Elements**: Start on a new line and take up the full width available.
+Example: `<div>`, `<h1>`, `<p>`.
 
-  ```html
-  <div>This is a block element.</div>
-  ```
+```html
+<div>This is a block element.</div>
+```
 
 ### Semantic HTML
 
@@ -481,17 +511,17 @@ alternative text for the image if it cannot be displayed.
 Links are used to navigate between pages on the internet. The `<a>` tag is used
 to create hyperlinks.
 
-- Basic link example:
+Basic link example:
 
-  ```html
-  <a href="https://example.com">This is a link</a>
-  ```
+```html
+<a href="path-to-file.html">This is a link</a>
+```
 
-- Open link in a new tab:
+Open link in a new tab:
 
-  ```html
-  <a href="https://example.com" target="_blank">Open in new tab</a>
-  ```
+```html
+<a href="https://example.com" target="_blank">Open in new tab</a>
+```
 
 ### Forms and Inputs
 
@@ -501,55 +531,55 @@ be placed.
 
 Here are examples of different types of input elements:
 
-- **Text Input**: For general text input.
+**Text Input**: For general text input.
 
-  ```html
-  <input type="text" name="username" placeholder="Enter your username" />
-  ```
+```html
+<input type="text" name="username" placeholder="Enter your username" />
+```
 
-- **Password Input**: For password entry fields. Characters are obscured.
+**Password Input**: For password entry fields. Characters are obscured.
 
-  ```html
-  <input type="password" name="password" placeholder="Enter your password" />
-  ```
+```html
+<input type="password" name="password" placeholder="Enter your password" />
+```
 
-- **Radio Buttons**: Let the user select one option from a set.
+**Radio Buttons**: Let the user select one option from a set.
 
-  ```html
-  <input type="radio" name="gender" value="male" /> Male
-  <input type="radio" name="gender" value="female" /> Female
-  ```
+```html
+<input type="radio" name="gender" value="male" /> Male
+<input type="radio" name="gender" value="female" /> Female
+```
 
-- **Checkboxes**: Allow the user to select multiple options.
+**Checkboxes**: Allow the user to select multiple options.
 
-  ```html
-  <input type="checkbox" name="option1" value="Option 1" /> Option 1
-  <input type="checkbox" name="option2" value="Option 2" /> Option 2
-  ```
+```html
+<input type="checkbox" name="option1" value="Option 1" /> Option 1
+<input type="checkbox" name="option2" value="Option 2" /> Option 2
+```
 
-- **Submit Button**: Used to submit a form.
+**Submit Button**: Used to submit a form.
 
-  ```html
-  <input type="submit" value="Submit" />
-  ```
+```html
+<input type="submit" value="Submit" />
+```
 
-- **Email Input**: For email addresses.
+**Email Input**: For email addresses.
 
-  ```html
-  <input type="email" name="email" placeholder="Enter your email" />
-  ```
+```html
+<input type="email" name="email" placeholder="Enter your email" />
+```
 
-- **Number Input**: For numeric input.
+**Number Input**: For numeric input.
 
-  ```html
-  <input type="number" name="quantity" min="1" max="10" />
-  ```
+```html
+<input type="number" name="quantity" min="1" max="10" />
+```
 
-- **Date Input**: For date input.
+**Date Input**: For date input.
 
-  ```html
-  <input type="date" name="birthday" />
-  ```
+```html
+<input type="date" name="birthday" />
+```
 
 ### Labels
 
@@ -643,36 +673,36 @@ improves the user experience.
 
 ### How to Apply Styles
 
-- **Inline**: Directly within an HTML element using the `style` attribute.
+**Inline**: Directly within an HTML element using the `style` attribute.
 
-  ```html
-  <p style="color: red;">This is an inline style.</p>
-  ```
+```html
+<p style="color: red;">This is an inline style.</p>
+```
 
-- **Internal**: Within the `<style>` tags in the HTML `<head>` section.
+**Internal**: Within the `<style>` tags in the HTML `<head>` section.
 
-  ```html
-  <head>
-    <style>
-      p {
-        color: blue;
-      }
-    </style>
-  </head>
-  ```
+```html
+<head>
+  <style>
+    p {
+      color: blue;
+    }
+  </style>
+</head>
+```
 
-- **External**: In a separate .css file that is linked to the HTML file.
+**External**: In a separate .css file that is linked to the HTML file.
 
-  ```html
-  <link rel="stylesheet" href="styles.css" />
-  ```
+```html
+<link rel="stylesheet" href="styles.css" />
+```
 
 ### Selectors
 
-- **Selectors**: Selectors are patterns that match against elements in an HTML
-  document, used to apply styles.
+Selectors are patterns that match against elements in an HTML document, used to
+apply styles.
 
-  - **Type Selector**: Matches elements by node name.
+**Type Selector**: Matches elements by node name.
 
     ```css
     p {
@@ -680,7 +710,7 @@ improves the user experience.
     }
     ```
 
-  - **Class Selector**: Matches elements by class attribute.
+**Class Selector**: Matches elements by class attribute.
 
     ```css
     .highlight {
@@ -688,7 +718,7 @@ improves the user experience.
     }
     ```
 
-  - **ID Selector**: Matches a single element by its ID attribute.
+**ID Selector**: Matches a single element by its ID attribute.
 
     ```css
     #navbar {
@@ -696,58 +726,59 @@ improves the user experience.
     }
     ```
 
-- **Specificity**: Determines which CSS rule is applied when multiple rules
-  could apply to an element. It is calculated based on the different categories
-  of selectors.
-  - Inline styles have the highest specificity.
-  - ID selectors have higher specificity than class selectors.
-  - Class selectors have higher specificity than type selectors.
+**Specificity**: Determines which CSS rule is applied when multiple rules could
+apply to an element. It is calculated based on the different categories of
+selectors.
+
+- Inline styles have the highest specificity.
+- ID selectors have higher specificity than class selectors.
+- Class selectors have higher specificity than type selectors.
 
 ### Common CSS Properties
 
-- **Color**: Sets the text color.
+**Color**: Sets the text color.
 
-  ```css
-  p {
-    color: red;
-  }
-  ```
+```css
+p {
+  color: red;
+}
+```
 
-- **Text Alignment**: Aligns the text within an element.
+**Text Alignment**: Aligns the text within an element.
 
-  ```css
-  h1 {
-    text-align: center;
-  }
-  ```
+```css
+h1 {
+  text-align: center;
+}
+```
 
-- **Font Size and Family**: Sets the font size and type for text.
+**Font Size and Family**: Sets the font size and type for text.
 
-  ```css
-  .text {
-    font-size: 16px;
-    font-family: Arial, sans-serif;
-  }
-  ```
+```css
+.text {
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+```
 
-- **Height and Width**: Sets the height and width of an element.
+**Height and Width**: Sets the height and width of an element.
 
-  ```css
-  .box {
-    height: 100px;
-    width: 200px;
-  }
-  ```
+```css
+.box {
+  height: 100px;
+  width: 200px;
+}
+```
 
-- **Border and Border Radius**: Sets the border style and radius (rounded
-  corners).
+**Border and Border Radius**: Sets the border style and radius (rounded
+corners).
 
-  ```css
-  .rounded-border {
-    border: 2px solid blue;
-    border-radius: 10px;
-  }
-  ```
+```css
+.rounded-border {
+  border: 2px solid blue;
+  border-radius: 10px;
+}
+```
 
 ### Box Model
 
@@ -755,11 +786,10 @@ The CSS Box Model is the foundation of layout on the Web — each element is
 represented as a rectangular box, with the box's content, padding, border, and
 margin built up around one another like the layers of an onion.
 
-- **Content**: The actual content of the box, where text and images appear.
-- **Padding**: Clears an area around the content inside the border. It's
-  transparent.
-- **Border**: A border that goes around the padding and content.
-- **Margin**: Clears an area outside the border.
+**Content**: The actual content of the box, where text and images appear.
+**Padding**: Clears an area around the content inside the border. It's
+transparent. **Border**: A border that goes around the padding and content.
+**Margin**: Clears an area outside the border.
 
 Use padding when you want to create space within the element, and margin when
 you want to create space between different elements.
@@ -830,7 +860,7 @@ order and alignment within the container.
 In a flex container, the main axis is the primary axis along which the flex
 items are laid out, and the cross axis is perpendicular to it.
 
-- Use `justify-content` to align items along the main axis.
+Use `justify-content` to align items along the main axis.
 
 ```css
 .container {
@@ -838,7 +868,7 @@ items are laid out, and the cross axis is perpendicular to it.
 }
 ```
 
-- Use `align-items` and `align-self` to align items along the cross axis.
+Use `align-items` and `align-self` to align items along the cross axis.
 
 ```css
 .container {
@@ -979,36 +1009,6 @@ tracks, using `grid-column-start`, `grid-column-end`, `grid-row-start`, and
 }
 ```
 
-### Positioning (Grid Template Areas)
-
-You can define areas in your grid and place items in these named areas, making
-it easier to understand how the layout is formed.
-
-```css
-.container {
-  grid-template-areas:
-    "header header"
-    "sidebar content"
-    "footer footer";
-}
-
-.header {
-  grid-area: header;
-}
-
-.sidebar {
-  grid-area: sidebar;
-}
-
-.content {
-  grid-area: content;
-}
-
-.footer {
-  grid-area: footer;
-}
-```
-
 ### Media Queries
 
 Media queries are used to apply different styles for different media
@@ -1049,14 +1049,12 @@ even desktop applications.
 
 JavaScript has various types of values, including:
 
-- **Number**: Represents numeric values. e.g., `5`, `3.14`.
-- **String**: Represents a sequence of characters. e.g., `"hello"`.
-- **Boolean**: Represents a true or false value.
-- **Object**: Represents a collection of key-value pairs.
-- **Array**: Represents an ordered list of values.
-- **Function**: Represents a reusable set of statements.
-- **Null**: Represents an intentional absence of any value or object.
-- **Undefined**: Represents a variable that has not been assigned a value.
+**Number**: Represents numeric values. e.g., `5`, `3.14`. **String**: Represents
+a sequence of characters. e.g., `"hello"`. **Boolean**: Represents a true or
+false value. **Object**: Represents a collection of key-value pairs. **Array**:
+Represents an ordered list of values. **Function**: Represents a reusable set of
+statements. **Null**: Represents an intentional absence of any value or object.
+**Undefined**: Represents a variable that has not been assigned a value.
 
 Example:
 
@@ -1072,17 +1070,16 @@ var arr = [1, 2, 3]; // Array
 
 JavaScript allows you to convert between different types. For example:
 
-- `parseInt("123")` converts the string `"123"` to the number `123`.
-- `parseFloat("3.14")` converts the string `"3.14"` to the number `3.14`.
-- `String(123)` converts the number `123` to the string `"123"`.
+`parseInt("123")` converts the string `"123"` to the number `123`.
+`parseFloat("3.14")` converts the string `"3.14"` to the number `3.14`.
+`String(123)` converts the number `123` to the string `"123"`.
 
 ### Operators
 
-- **Unary Operator**: Operates on a single operand. e.g., `!true` (logical NOT),
-  `-x` (negation).
-- **Binary Operator**: Operates on two operands. e.g., `x + y` (addition),
-  `x < y` (less than).
-- **Operand**: The value that the operator operates on.
+**Operand**: The value that the operator operates on. **Unary Operator**:
+Operates on a single operand. e.g., `!true` (logical NOT), `-x` (negation).
+**Binary Operator**: Operates on two operands. e.g., `x + y` (addition), `x < y`
+(less than).
 
 Example:
 
@@ -1103,13 +1100,14 @@ You can modify variables in place using various operators:
 
 - `++` : Increment
 - `--` : Decrement
-- `+=`, `-=`, etc: Change value in place
+- `+=`, `-=`: Change value in place
 
 Example:
 
 ```javascript
 var counter = 0;
 counter++; // Increment by 1
+counter--; // Decrement by 1
 counter += 5; // Increase by 5
 ```
 
@@ -1117,9 +1115,8 @@ counter += 5; // Increase by 5
 
 Comparison operators are used to compare values:
 
-- `==`: Equality (does not check the type)
-- `===`: Strict equality (checks both value and type)
-- `<`, `>`, `<=`, `>=`: Comparisons
+`==`: Equality (does not check the type) `===`: Strict equality (checks both
+value and type) `<`, `>`, `<=`, `>=`: Comparisons
 
 Example:
 
@@ -1160,10 +1157,9 @@ if (score >= 90) {
 
 Loops are used to execute a block of code repeatedly:
 
-- `for`: Execute code a specific number of times.
-- `while`: Execute code as long as a condition is true.
-- `do...while`: Execute code at least once, and then as long as a condition is
-  true.
+`for`: Execute code a specific number of times. `while`: Execute code as long as
+a condition is true. `do...while`: Execute code at least once, and then as long
+as a condition is true.
 
 Example:
 
@@ -1186,13 +1182,10 @@ while (j < 5) {
 Functions are reusable blocks of code that can be defined once and used multiple
 times:
 
-- **Declaration**: Define a function using the `function` keyword.
-- **Parameters**: The inputs to the function.
-- **Return**: Send a value back to the caller.
-- **Local variables**: Variables defined inside the function - not accessible
-  outside.
-- **Outer variables**: Variables defined outside the function - accessible
-  inside.
+**Declaration**: Define a function using the `function` keyword. **Parameters**:
+The inputs to the function. **Return**: Send a value back to the caller. **Local
+variables**: Variables defined inside the function - not accessible outside.
+**Outer variables**: Variables defined outside the function - accessible inside.
 
 Example:
 
@@ -1210,11 +1203,10 @@ console.log(result); // 15
 
 Arrays are used to store multiple values in a single variable:
 
-- **Length**: Find out how many elements are in an array with `.length`.
-- **Filtering**: Create a new array with elements that pass a test with
-  `.filter()`.
-- **Mapping**: Create a new array by transforming every element in an array with
-  `.map()`.
+**Length**: Find out how many elements are in an array with `.length`.
+**Filtering**: Create a new array with elements that pass a test with
+`.filter()`. **Mapping**: Create a new array by transforming every element in an
+array with `.map()`.
 
 Example:
 
