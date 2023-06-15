@@ -304,14 +304,14 @@ To add everything in the directory:
 git add .
 ```
 
-- **`git commit`**: Commit staged changes. This captures a snapshot of the
-  project’s currently staged changes.
+- `git commit`: Commit staged changes. This captures a snapshot of the project’s
+  currently staged changes.
 
 ```sh
 git commit -m "Your commit message here"
 ```
 
-- **`git push`**: Push commits to a remote repository. This sends the committed
+- `git push`: Push commits to a remote repository. This sends the committed
   changes to a remote repository like GitHub.
 
 ```sh
@@ -321,15 +321,15 @@ git push origin main
 Here, `origin` is the default name Git gives to the server you cloned from, and
 `main` is the branch you are pushing to.
 
-- **`git pull`**: Fetch and integrate changes from a remote repository. This
-  command is used to fetch changes from the remote repo and merge it into the
-  current branch.
+- `git pull`: Fetch and integrate changes from a remote repository. This command
+  is used to fetch changes from the remote repo and merge it into the current
+  branch.
 
 ```sh
 git pull origin main
 ```
 
-- **`git branch`**: List, create, or delete branches. This command allows you to
+- `git branch`: List, create, or delete branches. This command allows you to
   work with branches.
 
 To list branches:
