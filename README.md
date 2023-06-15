@@ -2,7 +2,8 @@
 
 ## Table of Contents
 
-- [Introduction](#introduction)
+### [Introduction](#introduction)
+
 - [How To Use This Guide](#how-to-use-this-guide)
 - [Installation](#installation)
 
