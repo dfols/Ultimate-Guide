@@ -1,4 +1,71 @@
-## Ultimate Study Guide
+# Ultimate Study Guide
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [How To Use This Guide](#how-to-use-this-guide)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+
+### Command Line Interface (CLI)
+
+- [What is CLI?](#what-is-cli)
+- [Why Should I Learn Command Line?](#why-should-i-learn-command-line)
+- [Shell vs. Terminal](#shell-vs-terminal)
+- [Common Commands](#common-commands)
+- [Creating Directories and Files](#creating-directories-and-files)
+
+### Git
+
+- [What is Git?](#what-is-git)
+- [Why Should I Learn Git?](#why-should-i-learn-git)
+- [Git vs. GitHub](#git-vs-github)
+- [Basic Git Commands](#basic-git-commands)
+- [Git Branches and Origin](#git-branches-and-origin)
+
+### HTML
+
+- [What is HTML?](#what-is-html)
+- [Why Should I Learn HTML?](#why-should-i-learn-html)
+- [Basic Document Structure](#basic-document-structure)
+- [Headings and Paragraphs](#headings-and-paragraphs)
+- [Lists](#lists)
+- [Images](#images)
+- [Links](#links)
+- [Forms and Inputs](#forms-and-inputs)
+- [Tables](#tables)
+- [Semantic HTML](#semantic-html)
+- [Block and Inline Elements](#block-and-inline-elements)
+
+### CSS
+
+- [What is CSS?](#what-is-css)
+- [Why Should I Learn CSS?](#why-should-i-learn-css)
+- [How to Apply Styles](#how-to-apply-styles)
+- [CSS Selectors](#css-selectors)
+- [Specificity](#specificity)
+- [CSS Box Model](#css-box-model)
+- [CSS Positioning](#css-positioning)
+- [Flexbox](#flexbox)
+- [CSS Grid](#css-grid)
+- [Media Queries](#media-queries)
+
+### JavaScript
+
+- [What is JavaScript?](#what-is-javascript)
+- [Why Should I Learn JavaScript?](#why-should-i-learn-javascript)
+- [Types of Values](#types-of-values)
+- [Type Conversion](#type-conversion)
+- [Operators](#operators)
+- [Modifying Variables in Place](#modifying-variables-in-place)
+- [Comparisons](#comparisons)
+- [Conditionals](#conditionals)
+- [Loops](#loops)
+- [Functions](#functions)
+- [Arrays](#arrays)
+- [Objects](#objects)
+- [Arrow Functions](#arrow-functions)
+- [Constructor and "new" Operator](#constructor-and-new-operator)
 
 ### Command Line Interface (CLI)
 
@@ -50,6 +117,137 @@ mkdir my_new_directory      # Create a new directory named "my_new_directory"
 cd my_new_directory         # Change directory to the newly created directory
 touch example.txt           # Create a new file named "example.txt" in the current directory
 ```
+
+### Git
+
+#### What is Git?
+
+Git is a distributed version control system for tracking changes in source code.
+It allows multiple developers to work on the same codebase without overwriting
+each other's changes. Git stores code history, so you can revert to previous
+versions if needed.
+
+#### Why Should I Learn Git?
+
+- **Collaborate on code with others**: Git enables multiple developers to work
+  on the same project simultaneously.
+- **Keep a history of changes**: You can view the history, find out who made
+  which changes, and revert to a previous state if necessary.
+- **Merge code and resolve conflicts**: Combine code from different branches and
+  resolve conflicts when they arise.
+
+#### Git vs. GitHub
+
+- **Git**:
+  - It is a version control system.
+  - You can use Git locally on your computer.
+  - Git helps you manage the history and collaboration of your code.
+- **GitHub**:
+  - GitHub is a web-based platform.
+  - You can host your Git repositories online on GitHub.
+  - It provides additional features like Pull Requests, Issues, and a web-based
+    interface for repository management.
+
+While Git is essential for version control, GitHub adds an extra layer of
+functionality, particularly for collaboration across teams and the open-source
+community.
+
+#### Basic Git Commands with Examples
+
+- **`git init`**: Initialize a new Git repository. This command creates a new
+  `.git` directory in your project to track the repository's metadata and object
+  database.
+
+  ```sh
+  git init
+  ```
+
+- **`git add`**: Stage changes for commit. This tells Git that you want to
+  include the updates to a particular file in the next commit.
+
+  ```sh
+  git add filename
+  ```
+
+  To add everything in the directory:
+
+  ```sh
+  git add .
+  ```
+
+- **`git commit`**: Commit staged changes. This captures a snapshot of the
+  project’s currently staged changes.
+
+  ```sh
+  git commit -m "Your commit message here"
+  ```
+
+- **`git push`**: Push commits to a remote repository. This sends the committed
+  changes to a remote repository like GitHub.
+
+  ```sh
+  git push origin main
+  ```
+
+  Here, `origin` is the default name Git gives to the server you cloned from,
+  and `main` is the branch you are pushing to.
+
+- **`git pull`**: Fetch and integrate changes from a remote repository. This
+  command is used to fetch changes from the remote repo and merge it into the
+  current branch.
+
+  ```sh
+  git pull origin main
+  ```
+
+- **`git branch`**: List, create, or delete branches. This command allows you to
+  work with branches.
+
+  To list branches:
+
+  ```sh
+  git branch
+  ```
+
+  To create a new branch:
+
+  ```sh
+  git branch new-branch
+  ```
+
+  To delete a branch:
+
+  ```sh
+  git branch -d branch-name
+  ```
+
+#### Understanding Origin
+
+In Git, `origin` is the default name given to the remote repository where you
+want to publish your commits. It's essentially a shorthand name for the remote
+repository's URL. For example, when you run the command `git push origin main`,
+you're telling Git to push your changes to the main branch on the remote
+repository associated with `origin`.
+
+#### Working with Branches
+
+Branches are used for developing features isolated from each other. The `main`
+branch is the default branch when you create a repository. Use other branches
+for development and merge them back to the `main` branch upon completion.
+
+Example:
+
+```sh
+git checkout -b feature-branch # Create and switch
+
+ to a new branch named "feature-branch"
+# Make changes and commit them
+git checkout main              # Switch back to the main branch
+git merge feature-branch       # Merge the feature branch into the main branch
+```
+
+This workflow is a fundamental aspect of version control, allowing for parallel
+development without conflicts.
 
 ### HTML
 
@@ -404,138 +602,6 @@ and height of the viewport and screen, the resolution of the device, etc.
 
 In this example, when the screen size is 600px or smaller, the background color
 will change to light blue.
-
-### Git
-
-#### What is Git?
-
-Git is a distributed version control system for tracking changes in source code.
-It allows multiple developers to work on the same codebase without overwriting
-each other's changes. Git stores code history, so you can revert to previous
-versions if needed.
-
-#### Why Should I Learn Git?
-
-- **Collaborate on code with others**: Git enables multiple developers to work
-  on the same project simultaneously.
-- **Keep a history of changes**: You can view the history, find out who made
-  which changes, and revert to a previous state if necessary.
-- **Merge code and resolve conflicts**: Combine code from different branches and
-  resolve conflicts when they arise.
-
-#### Git vs. GitHub
-
-- **Git**:
-  - It is a version control system.
-  - You can use Git locally on your computer.
-  - Git helps you manage the history and collaboration of your code.
-- **GitHub**:
-  - GitHub is a web-based platform.
-  - It uses Git for version control.
-  - You can host your Git repositories online on GitHub.
-  - It provides additional features like Pull Requests, Issues, and a web-based
-    interface for repository management.
-
-While Git is essential for version control, GitHub adds an extra layer of
-functionality, particularly for collaboration across teams and the open-source
-community.
-
-#### Basic Git Commands with Examples
-
-- **`git init`**: Initialize a new Git repository. This command creates a new
-  `.git` directory in your project to track the repository's metadata and object
-  database.
-
-  ```sh
-  git init
-  ```
-
-- **`git add`**: Stage changes for commit. This tells Git that you want to
-  include the updates to a particular file in the next commit.
-
-  ```sh
-  git add filename
-  ```
-
-  To add everything in the directory:
-
-  ```sh
-  git add .
-  ```
-
-- **`git commit`**: Commit staged changes. This captures a snapshot of the
-  project’s currently staged changes.
-
-  ```sh
-  git commit -m "Your commit message here"
-  ```
-
-- **`git push`**: Push commits to a remote repository. This sends the committed
-  changes to a remote repository like GitHub.
-
-  ```sh
-  git push origin main
-  ```
-
-  Here, `origin` is the default name Git gives to the server you cloned from,
-  and `main` is the branch you are pushing to.
-
-- **`git pull`**: Fetch and integrate changes from a remote repository. This
-  command is used to fetch changes from the remote repo and merge it into the
-  current branch.
-
-  ```sh
-  git pull origin main
-  ```
-
-- **`git branch`**: List, create, or delete branches. This command allows you to
-  work with branches.
-
-  To list branches:
-
-  ```sh
-  git branch
-  ```
-
-  To create a new branch:
-
-  ```sh
-  git branch new-branch
-  ```
-
-  To delete a branch:
-
-  ```sh
-  git branch -d branch-name
-  ```
-
-#### Understanding Origin
-
-In Git, `origin` is the default name given to the remote repository where you
-want to publish your commits. It's essentially a shorthand name for the remote
-repository's URL. For example, when you run the command `git push origin main`,
-you're telling Git to push your changes to the main branch on the remote
-repository associated with `origin`.
-
-#### Working with Branches
-
-Branches are used for developing features isolated from each other. The `main`
-branch is the default branch when you create a repository. Use other branches
-for development and merge them back to the `main` branch upon completion.
-
-Example:
-
-```sh
-git checkout -b feature-branch # Create and switch
-
- to a new branch named "feature-branch"
-# Make changes and commit them
-git checkout main              # Switch back to the main branch
-git merge feature-branch       # Merge the feature branch into the main branch
-```
-
-This workflow is a fundamental aspect of version control, allowing for parallel
-development without conflicts.
 
 ### JavaScript
 
