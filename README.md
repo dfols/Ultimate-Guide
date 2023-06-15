@@ -13,7 +13,7 @@
 - [Why Should I Learn Command Line?](#why-should-i-learn-command-line)
 - [Shell vs. Terminal](#shell-vs-terminal)
 - [Common Commands](#common-commands)
-- [Creating Directories and Files](#creating-directories-and-files)
+- [Example Workflow](#example-workflow)
 
 ### [Git](#git)
 
@@ -21,7 +21,8 @@
 - [Why Should I Learn Git?](#why-should-i-learn-git)
 - [Git vs. GitHub](#git-vs-github)
 - [Basic Git Commands](#basic-git-commands)
-- [Git Branches and Origin](#git-branches-and-origin)
+- [Working with Branches](#working-with-branches)
+- [Understanding Origin](#understanding-origin)
 
 ### [HTML](#html)
 
@@ -133,29 +134,89 @@ with your computer using text-based commands.
 
 ### Common Commands
 
-- `cd`: Change Directory.
-- `ls`: List files and directories.
+- `cd`: Change Directory. Use this to navigate through directories.
+  ```sh
+  cd Documents
+  ```
+- `ls`: List files and directories. Use this to view the contents of a
+  directory.
+  ```sh
+  ls
+  ```
 - `pwd`: Print Working Directory - shows the current directory path.
-- `mkdir`: Make a directory.
-- `rmdir`: Remove an empty directory.
-- `rm`: Remove files or directories.
-- `cp`: Copy files or directories.
-- `mv`: Move files or directories.
-- `echo`: Display a line of text.
-- `cat`: Display the content of files.
-- `grep`: Search for a specific pattern within a file.
+  ```sh
+  pwd
+  ```
+- `mkdir`: Make a directory. Use this to create a new directory.
+  ```sh
+  mkdir my_directory
+  ```
+- `rmdir`: Remove an empty directory. Use this to delete an empty directory.
+  ```sh
+  rmdir my_empty_directory
+  ```
+- `rm`: Remove files or directories. Use this to delete files or directories.
+  ```sh
+  rm file.txt
+  ```
+- `cp`: Copy files or directories. Use this to create a copy of files or
+  directories.
+  ```sh
+  cp source.txt destination.txt
+  ```
+- `mv`: Move files or directories. Use this to move files or directories to a
+  new location.
+  ```sh
+  mv file.txt my_directory/
+  ```
+- `echo`: Display a line of text. Useful for printing messages.
+  ```sh
+  echo "Hello, World!"
+  ```
+- `cat`: Display the content of files. Use this to read the contents of a file.
+  ```sh
+  cat file.txt
+  ```
+- `grep`: Search for a specific pattern within a file. Useful for searching
+  within files.
+  ```sh
+  grep "hello" file.txt
+  ```
 - `sudo`: Execute a command with superuser permissions.
-- `man`: Display the user manual for a command.
+  ```sh
+  sudo apt-get update
+  ```
+- `man`: Display the user manual for a command. Useful to get more information
+  about a command.
+  ```sh
+  man ls
+  ```
 
-### Example Workflow:
+### Understanding `.` and `..`
 
-Here is an example workflow combining the commands above:
+- `.` represents the current directory.
+- `..` represents the parent directory.
+
+These can be used in combination with the `cd` command for navigating
+directories. For example, `cd ..` moves you up one directory, and `cd .` does
+nothing as it keeps you in the current directory.
+
+### Example Workflow
+
+Here's an example workflow combining the commands above:
 
 ```sh
-mkdir my_new_directory      # Create a new directory named "my_new_directory"
-cd my_new_directory         # Change directory to the newly created directory
-touch example.txt           # Create a new file named "example.txt" in the current directory
+mkdir my_project              # Create a new directory named "my_project"
+cd my_project                 # Change directory to the newly created directory
+echo "Hello, World!" > hello.txt  # Create a new file named "hello.txt" and write "Hello, World!" into it
+cd ..                         # Go back to the parent directory
+mkdir another_directory       # Create another directory named "another_directory"
+mv my_project/hello.txt another_directory/  # Move the hello.txt file from my_project to another_directory
 ```
+
+This example creates a new directory, changes the current directory to the one
+just created, creates a file within it, then goes back to the parent directory
+and moves the file into another directory.
 
 ## Git
 
@@ -260,13 +321,11 @@ community.
   git branch -d branch-name
   ```
 
-### Understanding Origin
+  To switch to a different branch:
 
-In Git, `origin` is the default name given to the remote repository where you
-want to publish your commits. It's essentially a shorthand name for the remote
-repository's URL. For example, when you run the command `git push origin main`,
-you're telling Git to push your changes to the main branch on the remote
-repository associated with `origin`.
+  ```sh
+  git checkout branch-name
+  ```
 
 ### Working with Branches
 
@@ -277,16 +336,22 @@ for development and merge them back to the `main` branch upon completion.
 Example:
 
 ```sh
-git checkout -b feature-branch # Create and switch
-
- to a new branch named "feature-branch"
+git checkout -b feature-branch   # Create and switch to a new branch named "feature-branch"
 # Make changes and commit them
-git checkout main              # Switch back to the main branch
-git merge feature-branch       # Merge the feature branch into the main branch
+git checkout main                # Switch back to the main branch
+git merge feature-branch         # Merge the feature branch into the main branch
 ```
 
-This workflow is a fundamental aspect of version control, allowing for parallel
-development without conflicts.
+This example demonstrates how to create a new branch, switch to it, make
+changes, and then merge those changes back into the main branch.
+
+### Understanding Origin
+
+In Git, `origin` is the default name given to the remote repository where you
+want to publish your commits. It's essentially a shorthand name for the remote
+repository's URL. For example, when you run the command `git push origin main`,
+you're telling Git to push your changes to the main branch on the remote
+repository associated with `origin`.
 
 ## HTML
 
