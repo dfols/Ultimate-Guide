@@ -28,14 +28,17 @@
 
 - [What is HTML?](#what-is-html)
 - [Why Should I Learn HTML?](#why-should-i-learn-html)
-- [Basic Document Structure](#basic-document-structure)
+- [Document Structure](#document-structure)
+- [Inline vs Block Elements](#inline-vs-block-elements)
+- [Semantic HTML](#semantic-html)
 - [Headings and Paragraphs](#headings-and-paragraphs)
 - [Lists](#lists)
 - [Images](#images)
 - [Links](#links)
 - [Forms and Inputs](#forms-and-inputs)
+- [Labels](#labels)
 - [Tables](#tables)
-- [Semantic HTML](#semantic-html)
+
 - [Block and Inline Elements](#block-and-inline-elements)
 
 ### [CSS](#css)
@@ -426,7 +429,56 @@ accessibility of web content.
 </article>
 ```
 
-#### Links
+### Headings and Paragraphs
+
+Headings and paragraphs are fundamental building blocks of any web page.
+Headings are used to define the structure and layout of your content. Paragraphs
+are used for regular text.
+
+HTML headings are defined with the `<h1>` to `<h6>` tags, with `<h1>` being the
+largest and `<h6>` the smallest.
+
+```html
+<h1>This is a heading level 1</h1>
+<h2>This is a heading level 2</h2>
+<h3>This is a heading level 3</h3>
+<p>This is a paragraph.</p>
+```
+
+### Lists
+
+There are two types of lists in HTML: unordered lists and ordered lists. An
+unordered list is a collection of items that do not have a numerical order. This
+is created using the `<ul>` element. An ordered list is a collection of items
+that are numbered in order. This is created using the `<ol>` element.
+
+```html
+<!-- Unordered list -->
+<ul>
+  <li>Apple</li>
+  <li>Banana</li>
+  <li>Cherry</li>
+</ul>
+
+<!-- Ordered list -->
+<ol>
+  <li>First item</li>
+  <li>Second item</li>
+  <li>Third item</li>
+</ol>
+```
+
+#### Images
+
+The `<img>` tag is used to embed images in a document. The `src` attribute
+contains the image URL and is mandatory. The `alt` attribute provides
+alternative text for the image if it cannot be displayed.
+
+```html
+<img src="url-of-your-image.jpg" alt="Description of the image" />
+```
+
+### Links
 
 Links are used to navigate between pages on the internet. The `<a>` tag is used
 to create hyperlinks.
@@ -445,21 +497,110 @@ to create hyperlinks.
 
 ### Forms and Inputs
 
-Forms are essential for collecting data from the user. The `<form>` element acts
-as a container for different types of input elements such as text fields,
-checkboxes, radio buttons, and buttons.
+Forms are essential for collecting data from the user. The `<form>` element is
+used to create a form, and within this, various input elements and buttons can
+be placed.
+
+Here are examples of different types of input elements:
+
+- **Text Input**: For general text input.
+
+  ```html
+  <input type="text" name="username" placeholder="Enter your username" />
+  ```
+
+- **Password Input**: For password entry fields. Characters are obscured.
+
+  ```html
+  <input type="password" name="password" placeholder="Enter your password" />
+  ```
+
+- **Radio Buttons**: Let the user select one option from a set.
+
+  ```html
+  <input type="radio" name="gender" value="male" /> Male
+  <input type="radio" name="gender" value="female" /> Female
+  ```
+
+- **Checkboxes**: Allow the user to select multiple options.
+
+  ```html
+  <input type="checkbox" name="option1" value="Option 1" /> Option 1
+  <input type="checkbox" name="option2" value="Option 2" /> Option 2
+  ```
+
+- **Submit Button**: Used to submit a form.
+
+  ```html
+  <input type="submit" value="Submit" />
+  ```
+
+- **Email Input**: For email addresses.
+
+  ```html
+  <input type="email" name="email" placeholder="Enter your email" />
+  ```
+
+- **Number Input**: For numeric input.
+
+  ```html
+  <input type="number" name="quantity" min="1" max="10" />
+  ```
+
+- **Date Input**: For date input.
+
+  ```html
+  <input type="date" name="birthday" />
+  ```
+
+### Labels
+
+The `<label>` element is an essential part of forms. It is used to add text next
+to an input element, improving usability and accessibility. The `for` attribute
+in the `<label>` should have the same value as the `id` attribute of the input
+it's associated with. This allows users to click the label to focus/select the
+input element.
+
+Here's how you can use the `<label>` element in conjunction with different input
+types:
 
 ```html
-<form action="/submit_form" method="post">
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" /><br />
+<!-- Text input with label -->
+<label for="username">Username:</label>
+<input
+  type="text"
+  id="username"
+  name="username"
+  placeholder="Enter your username"
+/>
 
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" /><br />
+<!-- Password input with label -->
+<label for="password">Password:</label>
+<input
+  type="password"
+  id="password"
+  name="password"
+  placeholder="Enter your password"
+/>
 
-  <input type="submit" value="Submit" />
-</form>
+<!-- Radio buttons with labels -->
+<label for="male">Male</label>
+<input type="radio" id="male" name="gender" value="male" />
+<label for="female">Female</label>
+<input type="radio" id="female" name="gender" value="female" />
+
+<!-- Checkbox with label -->
+<label for="option1">Option 1</label>
+<input type="checkbox" id="option1" name="option1" value="Option 1" />
+
+<!-- Number input with label -->
+<label for="quantity">Quantity (between 1 and 10):</label>
+<input type="number" id="quantity" name="quantity" min="1" max="10" />
 ```
+
+Using labels not only makes the form more user-friendly but also makes it more
+accessible to screen readers, improving the overall accessibility of your
+webpage.
 
 ### Tables
 
