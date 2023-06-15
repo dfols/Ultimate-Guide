@@ -135,83 +135,84 @@ with your computer using text-based commands.
 
 ### Common Commands
 
-`cd`: Change Directory. Use this to navigate through directories.
+- `cd`: Change Directory. Use this to navigate through directories.
 
 ```sh
 cd Documents
 ```
 
-`ls`: List files and directories. Use this to view the contents of a directory.
+- `ls`: List files and directories. Use this to view the contents of a
+  directory.
 
 ```sh
 ls
 ```
 
-`pwd`: Print Working Directory - shows the current directory path.
+- `pwd`: Print Working Directory - shows the current directory path.
 
 ```sh
 pwd
 ```
 
-`mkdir`: Make a directory. Use this to create a new directory.
+- `mkdir`: Make a directory. Use this to create a new directory.
 
 ```sh
 mkdir my_directory
 ```
 
-`rmdir`: Remove an empty directory. Use this to delete an empty directory.
+-`rmdir`: Remove an empty directory. Use this to delete an empty directory.
 
 ```sh
 rmdir my_empty_directory
 ```
 
-`rm`: Remove files or directories. Use this to delete files or directories.
+- `rm`: Remove files or directories. Use this to delete files or directories.
 
 ```sh
 rm file.txt
 ```
 
-`cp`: Copy files or directories. Use this to create a copy of files or
-directories.
+- `cp`: Copy files or directories. Use this to create a copy of files or
+  directories.
 
 ```sh
 cp source.txt destination.txt
 ```
 
-`mv`: Move files or directories. Use this to move files or directories to a new
-location.
+- `mv`: Move files or directories. Use this to move files or directories to a
+  new location.
 
 ```sh
 mv file.txt my_directory/
 ```
 
-`echo`: Display a line of text. Useful for printing messages.
+- `echo`: Display a line of text. Useful for printing messages.
 
 ```sh
 echo "Hello, World!"
 ```
 
-`cat`: Display the content of files. Use this to read the contents of a file.
+- `cat`: Display the content of files. Use this to read the contents of a file.
 
 ```sh
 cat file.txt
 ```
 
-`grep`: Search for a specific pattern within a file. Useful for searching within
-files.
+- `grep`: Search for a specific pattern within a file. Useful for searching
+  within files.
 
 ```sh
 grep "hello" file.txt
 ```
 
-`sudo`: Execute a command with superuser permissions.
+- `sudo`: Execute a command with superuser permissions.
 
 ```sh
 sudo apt-get update
 ```
 
-`man`: Display the user manual for a command. Useful to get more information
-about a command.
+- `man`: Display the user manual for a command. Useful to get more information
+  about a command.
 
 ```sh
 man ls
