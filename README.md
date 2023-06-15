@@ -13,6 +13,7 @@
 - [Why Should I Learn Command Line?](#why-should-i-learn-command-line)
 - [Shell vs. Terminal](#shell-vs-terminal)
 - [Common Commands](#common-commands)
+- [Understanding . and ..](#understanding--and)
 - [Example Workflow](#example-workflow)
 
 ### [Git](#git)
@@ -38,7 +39,6 @@
 - [Forms and Inputs](#forms-and-inputs)
 - [Labels](#labels)
 - [Tables](#tables)
-- [Block and Inline Elements](#block-and-inline-elements)
 
 ### [CSS](#css)
 
@@ -281,7 +281,7 @@ While Git is essential for version control, GitHub adds an extra layer of
 functionality, particularly for collaboration across teams and the open-source
 community.
 
-### Basic Git Commands with Examples
+### Basic Git Commands
 
 - **`git init`**: Initialize a new Git repository. This command creates a new
   `.git` directory in your project to track the repository's metadata and object
@@ -498,7 +498,7 @@ that are numbered in order. This is created using the `<ol>` element.
 </ol>
 ```
 
-#### Images
+### Images
 
 The `<img>` tag is used to embed images in a document. The `src` attribute
 contains the image URL and is mandatory. The `alt` attribute provides
@@ -786,10 +786,11 @@ The CSS Box Model is the foundation of layout on the Web — each element is
 represented as a rectangular box, with the box's content, padding, border, and
 margin built up around one another like the layers of an onion.
 
-**Content**: The actual content of the box, where text and images appear.
-**Padding**: Clears an area around the content inside the border. It's
-transparent. **Border**: A border that goes around the padding and content.
-**Margin**: Clears an area outside the border.
+- **Content**: The actual content of the box, where text and images appear.
+- **Padding**: Clears an area around the content inside the border. It's
+  transparent.
+- **Border**: A border that goes around the padding and content.
+- **Margin**: Clears an area outside the border.
 
 Use padding when you want to create space within the element, and margin when
 you want to create space between different elements.
@@ -1141,7 +1142,7 @@ Comparison operators are used to compare values:
 - `===`: Strict equality (checks both value and type)
 - `<`, `>`, `<=`, `>=`: Comparisons
 
-Example:
+##### Example:
 
 ```javascript
 let age = 30;
@@ -1152,6 +1153,25 @@ if (age >= 18) {
   console.log("Minor");
 }
 ```
+
+##### Strict Comparison Example:
+
+It's often a good practice to use strict equality (`===`) to avoid unexpected
+type coercion. Here's an example that illustrates the difference between `==`
+and `===`.
+
+```javascript
+let number = 0;
+let string = "0";
+
+console.log(number == string); // Output: true (value is the same, type is different)
+console.log(number === string); // Output: false (type is different)
+```
+
+In the example above, `==` only compares the values and performs type coercion
+(converts the string "0" to the number 0). In contrast, `===` compares both
+value and type, so a string and a number are considered unequal even if they
+look the same.
 
 ### Conditionals
 
@@ -1199,6 +1219,13 @@ while (j < 5) {
   console.log(j); // 0, 1, 2, 3, 4
   j++;
 }
+
+// do...while loop
+let k = 0;
+do {
+  console.log(k); // 0, 1, 2, 3, 4
+  k++;
+} while (k < 5);
 ```
 
 ### Functions
