@@ -67,7 +67,7 @@
 - [Arrow Functions](#arrow-functions)
 - [Constructor and "new" Operator](#constructor-and-new-operator)
 
-### Introduction
+## Introduction
 
 Welcome to the Ultimate Guide! This guide covers the basics of Command Line
 Interface (CLI), HTML, CSS, JavaScript, and Git, providing you with the
@@ -106,20 +106,20 @@ Before we start, let's make sure you have all the necessary software installed:
 Once you have these tools installed, you're ready to dive into the exciting
 world of web development!
 
-### Command Line Interface (CLI)
+## Command Line Interface (CLI)
 
-#### What is CLI?
+### What is CLI?
 
 The Command Line Interface (CLI) is a user interface that allows you to interact
 with your computer using text-based commands.
 
-#### Why Should I Learn Command Line?
+### Why Should I Learn Command Line?
 
 - Direct interaction with the operating system.
 - Automating tasks using scripts.
 - Essential for software development and system administration.
 
-#### Shell vs. Terminal
+### Shell vs. Terminal
 
 - **Shell**: A shell is a program that processes commands and returns output.
   It's an interface that allows users to interact with the operating system by
@@ -131,7 +131,7 @@ with your computer using text-based commands.
   the shell for processing and then displays the output. The terminal itself
   doesn't handle command processing; it's just the interface to the shell.
 
-#### Common Commands
+### Common Commands
 
 - `cd`: Change Directory.
 - `ls`: List files and directories.
@@ -147,7 +147,7 @@ with your computer using text-based commands.
 - `sudo`: Execute a command with superuser permissions.
 - `man`: Display the user manual for a command.
 
-#### Example Workflow:
+### Example Workflow:
 
 Here is an example workflow combining the commands above:
 
@@ -157,16 +157,16 @@ cd my_new_directory         # Change directory to the newly created directory
 touch example.txt           # Create a new file named "example.txt" in the current directory
 ```
 
-### Git
+## Git
 
-#### What is Git?
+### What is Git?
 
 Git is a distributed version control system for tracking changes in source code.
 It allows multiple developers to work on the same codebase without overwriting
 each other's changes. Git stores code history, so you can revert to previous
 versions if needed.
 
-#### Why Should I Learn Git?
+### Why Should I Learn Git?
 
 - **Collaborate on code with others**: Git enables multiple developers to work
   on the same project simultaneously.
@@ -175,7 +175,7 @@ versions if needed.
 - **Merge code and resolve conflicts**: Combine code from different branches and
   resolve conflicts when they arise.
 
-#### Git vs. GitHub
+### Git vs. GitHub
 
 - **Git**:
   - It is a version control system.
@@ -191,7 +191,7 @@ While Git is essential for version control, GitHub adds an extra layer of
 functionality, particularly for collaboration across teams and the open-source
 community.
 
-#### Basic Git Commands with Examples
+### Basic Git Commands with Examples
 
 - **`git init`**: Initialize a new Git repository. This command creates a new
   `.git` directory in your project to track the repository's metadata and object
@@ -260,7 +260,7 @@ community.
   git branch -d branch-name
   ```
 
-#### Understanding Origin
+### Understanding Origin
 
 In Git, `origin` is the default name given to the remote repository where you
 want to publish your commits. It's essentially a shorthand name for the remote
@@ -268,7 +268,7 @@ repository's URL. For example, when you run the command `git push origin main`,
 you're telling Git to push your changes to the main branch on the remote
 repository associated with `origin`.
 
-#### Working with Branches
+### Working with Branches
 
 Branches are used for developing features isolated from each other. The `main`
 branch is the default branch when you create a repository. Use other branches
@@ -288,21 +288,21 @@ git merge feature-branch       # Merge the feature branch into the main branch
 This workflow is a fundamental aspect of version control, allowing for parallel
 development without conflicts.
 
-### HTML
+## HTML
 
-#### What is HTML?
+### What is HTML?
 
 HTML (Hypertext Markup Language) is the standard markup language for documents
 designed to be displayed in a web browser. It helps structure the content and
 present it on the web.
 
-#### Why Should I Learn HTML?
+### Why Should I Learn HTML?
 
 HTML is the backbone of web pages. Learning HTML is essential for anyone
 interested in web development or design, as it's the basic building block for
 creating websites.
 
-#### Document Structure
+### Document Structure
 
 An HTML document has a specific structure that includes `<!DOCTYPE html>`,
 `<html>`, `<head>`, and `<body>` elements.
@@ -324,7 +324,7 @@ An HTML document has a specific structure that includes `<!DOCTYPE html>`,
 </html>
 ```
 
-#### Inline vs Block Elements
+### Inline vs Block Elements
 
 - **Inline Elements**: Do not start on a new line and only take up as much width
   as necessary. Example: `<span>`, `<a>`.
@@ -340,7 +340,7 @@ An HTML document has a specific structure that includes `<!DOCTYPE html>`,
   <div>This is a block element.</div>
   ```
 
-#### Semantic HTML
+### Semantic HTML
 
 Semantic HTML elements are those that clearly describe their meaning in a human
 and machine-readable way. Examples include `<header>`, `<footer>`, `<article>`,
@@ -378,7 +378,7 @@ to create hyperlinks.
   <a href="https://example.com" target="_blank">Open in new tab</a>
   ```
 
-#### Forms and Inputs
+### Forms and Inputs
 
 Forms are essential for collecting data from the user. The `<form>` element acts
 as a container for different types of input elements such as text fields,
@@ -396,7 +396,7 @@ checkboxes, radio buttons, and buttons.
 </form>
 ```
 
-#### Tables
+### Tables
 
 Tables are used to organize data into rows and columns. They are created using
 the `<table>` element.
@@ -423,21 +423,21 @@ defines a standard cell in the table. This table is used to represent data in a
 structured format, which can be particularly useful for displaying tabular data
 like schedules, statistics, or lists.
 
-### CSS
+## CSS
 
-#### What is CSS?
+### What is CSS?
 
 CSS (Cascading Style Sheets) is a stylesheet language used to describe the
 presentation of a document written in HTML. It allows you to control the layout,
 colors, fonts, and other visual aspects of web pages.
 
-#### Why Should I Learn CSS?
+### Why Should I Learn CSS?
 
 CSS is essential for web development because it provides the styling and
 aesthetic aspects of a webpage. It makes websites visually appealing and
 improves the user experience.
 
-#### Where to Put CSS
+### Where to Put CSS
 
 - **Inline**: Directly within an HTML element using the `style` attribute.
 
@@ -463,7 +463,7 @@ improves the user experience.
   <link rel="stylesheet" href="styles.css" />
   ```
 
-#### Selectors and Specificity
+### Selectors and Specificity
 
 - **Selectors**: Selectors are patterns that match against elements in an HTML
   document, used to apply styles.
@@ -499,7 +499,7 @@ improves the user experience.
   - ID selectors have higher specificity than class selectors.
   - Class selectors have higher specificity than type selectors.
 
-#### Common CSS Properties
+### Common CSS Properties
 
 - **Color**: Sets the text color.
 
@@ -545,7 +545,7 @@ improves the user experience.
   }
   ```
 
-#### Box Model
+### Box Model
 
 The CSS Box Model is the foundation of layout on the Web — each element is
 represented as a rectangular box, with the box's content, padding, border, and
@@ -569,7 +569,7 @@ you want to create space between different elements.
 }
 ```
 
-#### Flexbox
+### Flexbox
 
 Flexbox is a layout model that allows elements within a parent container to be
 automatically arranged dynamically according to size and screen space.
@@ -607,7 +607,7 @@ automatically arranged dynamically according to size and screen space.
   }
   ```
 
-#### Grid
+### Grid
 
 CSS Grid is a layout system that lets you design complex layouts by placing
 elements into rows and columns.
@@ -625,7 +625,7 @@ elements into rows and columns.
 }
 ```
 
-#### Media Queries
+### Media Queries
 
 Media queries are used to apply different styles for different media
 types/devices. Media queries can be used to check many things, such as the width
@@ -642,9 +642,9 @@ and height of the viewport and screen, the resolution of the device, etc.
 In this example, when the screen size is 600px or smaller, the background color
 will change to light blue.
 
-### JavaScript
+## JavaScript
 
-#### What is JavaScript?
+### What is JavaScript?
 
 JavaScript is a high-level, dynamic programming language primarily known for
 adding interactivity and other complex features to websites. It is an essential
@@ -652,7 +652,7 @@ technology for web development, alongside HTML and CSS. However, it has evolved
 over time and is now used for server-side development, mobile applications, and
 even desktop applications.
 
-#### Why Should I Learn JavaScript?
+### Why Should I Learn JavaScript?
 
 - **Web Development**: JavaScript is fundamental for building interactive
   websites.
@@ -661,7 +661,7 @@ even desktop applications.
 - **Community and Libraries**: There's a large community and countless libraries
   and frameworks available.
 
-#### Types of Values
+### Types of Values
 
 JavaScript has various types of values, including:
 
@@ -684,7 +684,7 @@ var obj = {}; // Object
 var arr = [1, 2, 3]; // Array
 ```
 
-#### Type Conversion
+### Type Conversion
 
 JavaScript allows you to convert between different types. For example:
 
@@ -692,7 +692,7 @@ JavaScript allows you to convert between different types. For example:
 - `parseFloat("3.14")` converts the string `"3.14"` to the number `3.14`.
 - `String(123)` converts the number `123` to the string `"123"`.
 
-#### Operators
+### Operators
 
 - **Unary Operator**: Operates on a single operand. e.g., `!true` (logical NOT),
   `-x` (negation).
@@ -713,7 +713,7 @@ var negativeX = -x; // -10
 var sum = x + y; // 15
 ```
 
-#### Modifying Variables in Place
+### Modifying Variables in Place
 
 You can modify variables in place using various operators:
 
@@ -729,7 +729,7 @@ counter++; // Increment by 1
 counter += 5; // Increase by 5
 ```
 
-#### Comparisons
+### Comparisons
 
 Comparison operators are used to compare values:
 
@@ -749,7 +749,7 @@ if (age >= 18) {
 }
 ```
 
-#### Conditionals
+### Conditionals
 
 Conditionals are used to make decisions in code:
 
@@ -772,7 +772,7 @@ if (score >= 90) {
 }
 ```
 
-#### Loops
+### Loops
 
 Loops are used to execute a block of code repeatedly:
 
@@ -797,7 +797,7 @@ while (j < 5) {
 }
 ```
 
-#### Functions
+### Functions
 
 Functions are reusable blocks of code that can be defined once and used multiple
 times:
@@ -822,7 +822,7 @@ var result = add(5, 10); // 15
 console.log(result); // 15
 ```
 
-#### Arrays
+### Arrays
 
 Arrays are used to store multiple values in a single variable:
 
@@ -853,7 +853,7 @@ var squares = numbers.map(function (num) {
 console.log(squares); // [1, 4, 9, 16, 25]
 ```
 
-#### Objects
+### Objects
 
 Objects are collections of key-value pairs. They can store data and functions.
 
@@ -872,7 +872,7 @@ console.log(person.name); // Alice
 person.greet(); // Hello, Alice
 ```
 
-#### Arrow Functions
+### Arrow Functions
 
 Arrow functions allow for a shorter syntax when writing functions and do not
 have their own `this` value.
@@ -885,7 +885,7 @@ var add = (a, b) => a + b;
 console.log(add(5, 10)); // 15
 ```
 
-#### Constructor and "new" Operator
+### Constructor and "new" Operator
 
 Constructors are used to create objects. The `new` operator is used to create an
 instance of an object.
