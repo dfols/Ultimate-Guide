@@ -66,8 +66,9 @@
 - [Functions](#functions)
 - [Arrays](#arrays)
 - [Objects](#objects)
-- [Arrow Functions](#arrow-functions)
 - [Constructor and "new" Operator](#constructor-and-new-operator)
+- [This](#this)
+- [Arrow Functions](#arrow-functions)
 
 ## Introduction
 
@@ -160,7 +161,7 @@ pwd
 mkdir my_directory
 ```
 
--`rmdir`: Remove an empty directory. Use this to delete an empty directory.
+- `rmdir`: Remove an empty directory. Use this to delete an empty directory.
 
 ```sh
 rmdir my_empty_directory
@@ -282,16 +283,16 @@ community.
 
 ### Basic Git Commands with Examples
 
-**`git init`**: Initialize a new Git repository. This command creates a new
-`.git` directory in your project to track the repository's metadata and object
-database.
+- **`git init`**: Initialize a new Git repository. This command creates a new
+  `.git` directory in your project to track the repository's metadata and object
+  database.
 
 ```sh
 git init
 ```
 
-**`git add`**: Stage changes for commit. This tells Git that you want to include
-the updates to a particular file in the next commit.
+- **`git add`**: Stage changes for commit. This tells Git that you want to
+  include the updates to a particular file in the next commit.
 
 ```sh
 git add filename
@@ -303,15 +304,15 @@ To add everything in the directory:
 git add .
 ```
 
-**`git commit`**: Commit staged changes. This captures a snapshot of the
-project’s currently staged changes.
+- **`git commit`**: Commit staged changes. This captures a snapshot of the
+  project’s currently staged changes.
 
 ```sh
 git commit -m "Your commit message here"
 ```
 
-**`git push`**: Push commits to a remote repository. This sends the committed
-changes to a remote repository like GitHub.
+- **`git push`**: Push commits to a remote repository. This sends the committed
+  changes to a remote repository like GitHub.
 
 ```sh
 git push origin main
@@ -320,16 +321,16 @@ git push origin main
 Here, `origin` is the default name Git gives to the server you cloned from, and
 `main` is the branch you are pushing to.
 
-**`git pull`**: Fetch and integrate changes from a remote repository. This
-command is used to fetch changes from the remote repo and merge it into the
-current branch.
+- **`git pull`**: Fetch and integrate changes from a remote repository. This
+  command is used to fetch changes from the remote repo and merge it into the
+  current branch.
 
 ```sh
 git pull origin main
 ```
 
-**`git branch`**: List, create, or delete branches. This command allows you to
-work with branches.
+- **`git branch`**: List, create, or delete branches. This command allows you to
+  work with branches.
 
 To list branches:
 
@@ -529,8 +530,6 @@ Open link in a new tab:
 Forms are essential for collecting data from the user. The `<form>` element is
 used to create a form, and within this, various input elements and buttons can
 be placed.
-
-Here are examples of different types of input elements:
 
 **Text Input**: For general text input.
 
@@ -1050,12 +1049,14 @@ even desktop applications.
 
 JavaScript has various types of values, including:
 
-**Number**: Represents numeric values. e.g., `5`, `3.14`. **String**: Represents
-a sequence of characters. e.g., `"hello"`. **Boolean**: Represents a true or
-false value. **Object**: Represents a collection of key-value pairs. **Array**:
-Represents an ordered list of values. **Function**: Represents a reusable set of
-statements. **Null**: Represents an intentional absence of any value or object.
-**Undefined**: Represents a variable that has not been assigned a value.
+- **Number**: Represents numeric values. e.g., `5`, `3.14`.
+- **String**: Represents a sequence of characters. e.g., `"hello"`.
+- **Boolean**: Represents a true or false value. **Object**: Represents a
+  collection of key-value pairs.
+- **Array**: Represents an ordered list of values.
+- **Function**: Represents a reusable set of statements.
+- **Null**: Represents an intentional absence of any value or object.
+- **Undefined**: Represents a variable that has not been assigned a value.
 
 Example:
 
@@ -1069,18 +1070,38 @@ var arr = [1, 2, 3]; // Array
 
 ### Type Conversion
 
-JavaScript allows you to convert between different types. For example:
+In JavaScript, type conversion is the process of converting values from one data
+type to another. This can happen automatically (implicit conversion) or be
+performed explicitly using certain functions.
 
-`parseInt("123")` converts the string `"123"` to the number `123`.
-`parseFloat("3.14")` converts the string `"3.14"` to the number `3.14`.
-`String(123)` converts the number `123` to the string `"123"`.
+Example of implicit conversion: When you add a number and a string, JavaScript
+converts the number to a string and concatenates them.
+
+```javascript
+var result = 5 + "7"; // "57" as a string, not 12
+```
+
+Using `parseInt()` to parse an integer from a floating-point number string:
+
+```javascript
+var numberString = "3.14";
+var integerNumber = parseInt(numberString); // 3
+```
+
+Using `parseFloat()` to parse a floating-point number from a string:
+
+```javascript
+var numberString = "3.14";
+var floatNumber = parseFloat(numberString); // 3.14
+```
 
 ### Operators
 
-**Operand**: The value that the operator operates on. **Unary Operator**:
-Operates on a single operand. e.g., `!true` (logical NOT), `-x` (negation).
-**Binary Operator**: Operates on two operands. e.g., `x + y` (addition), `x < y`
-(less than).
+- **Operand**: The value that the operator operates on.
+- **Unary Operator**: Operates on a single operand. e.g., `!true` (logical NOT),
+  `-x` (negation).
+- **Binary Operator**: Operates on two operands. e.g., `x + y` (addition),
+  `x < y` (less than).
 
 Example:
 
@@ -1116,8 +1137,9 @@ counter += 5; // Increase by 5
 
 Comparison operators are used to compare values:
 
-`==`: Equality (does not check the type) `===`: Strict equality (checks both
-value and type) `<`, `>`, `<=`, `>=`: Comparisons
+- `==`: Equality (does not check the type)
+- `===`: Strict equality (checks both value and type)
+- `<`, `>`, `<=`, `>=`: Comparisons
 
 Example:
 
@@ -1158,9 +1180,10 @@ if (score >= 90) {
 
 Loops are used to execute a block of code repeatedly:
 
-`for`: Execute code a specific number of times. `while`: Execute code as long as
-a condition is true. `do...while`: Execute code at least once, and then as long
-as a condition is true.
+- `for`: Execute code a specific number of times.
+- `while`: Execute code as long as a condition is true.
+- `do...while`: Execute code at least once, and then as long as a condition is
+  true.
 
 Example:
 
@@ -1204,10 +1227,11 @@ console.log(result); // 15
 
 Arrays are used to store multiple values in a single variable:
 
-**Length**: Find out how many elements are in an array with `.length`.
-**Filtering**: Create a new array with elements that pass a test with
-`.filter()`. **Mapping**: Create a new array by transforming every element in an
-array with `.map()`.
+- **Length**: Find out how many elements are in an array with `.length`.
+- **Filtering**: Create a new array with elements that pass a test with
+  `.filter()`.
+- **Mapping**: Create a new array by transforming every element in an array with
+  `.map()`.
 
 Example:
 
@@ -1232,12 +1256,47 @@ console.log(squares); // [1, 4, 9, 16, 25]
 
 ### Objects
 
-Objects are collections of key-value pairs. They can store data and functions.
+Objects in JavaScript are collections of key-value pairs, where the keys are
+strings and the values can be any data type, including functions. Objects are
+used to store structured data and represent real-world entities.
 
-Example:
+#### Creating Objects
+
+You can create an object using curly braces `{}`.
 
 ```javascript
-var person = {
+let person = {
+  name: "John",
+  age: 25,
+};
+```
+
+#### Accessing Properties
+
+You can access the properties of an object using the dot notation.
+
+```javascript
+console.log(person.name); // Output: "John"
+```
+
+Alternatively, you can use the square brackets notation. This is particularly
+useful when the property name is stored in a variable or if the property name is
+not a valid identifier.
+
+```javascript
+console.log(person["age"]); // Output: 25
+
+let propertyName = "name";
+console.log(person[propertyName]); // Output: "John"
+```
+
+#### Adding Functions to Objects
+
+Objects can also store functions. These functions are often referred to as
+methods when they are properties of an object.
+
+```javascript
+let person = {
   name: "Alice",
   age: 30,
   greet: function () {
@@ -1245,35 +1304,133 @@ var person = {
   },
 };
 
-console.log(person.name); // Alice
-person.greet(); // Hello, Alice
+person.greet(); // Output: "Hello, Alice"
 ```
 
-### Arrow Functions
+In the example above, `greet` is a method of the `person` object. The `this`
+keyword inside the `greet` method refers to the `person` object.
 
-Arrow functions allow for a shorter syntax when writing functions and do not
-have their own `this` value.
+### `this`
 
-Example:
+In JavaScript, the `this` keyword is a special identifier that's automatically
+defined in the scope of every function. It refers to the object on which the
+function was called, also known as the calling object. The value of `this` is
+determined based on how the function is called.
+
+#### In a Method
+
+When a function is a property of an object (a method), `this` refers to the
+object itself.
 
 ```javascript
-var add = (a, b) => a + b;
+let person = {
+  name: "Alice",
+  greet: function () {
+    console.log("Hello, my name is " + this.name);
+  },
+};
 
-console.log(add(5, 10)); // 15
+person.greet(); // Output: "Hello, my name is Alice"
+```
+
+#### In a Regular Function
+
+In a regular function (not an arrow function), `this` doesn't refer to the
+enclosing object literal. Instead, in non-strict mode, it defaults to the global
+object (`window` in browsers), while in strict mode, it's `undefined`.
+
+```javascript
+function showThis() {
+  console.log(this);
+}
+
+showThis(); // In non-strict mode: Output is the global object. In strict mode: Output is undefined.
+```
+
+#### In an Arrow Function
+
+Arrow functions don’t have their own `this`. Instead, `this` is lexically bound
+to the enclosing scope.
+
+```javascript
+let person = {
+  name: "Alice",
+  greet: () => {
+    console.log("Hello, my name is " + this.name);
+  },
+};
+
+person.greet(); // Output: "Hello, my name is undefined" because `this` is not bound to the person object
+```
+
+#### Using `this` in an Event Listener
+
+In an event listener, `this` refers to the DOM element that is the target of the
+event.
+
+```javascript
+button.addEventListener("click", function () {
+  console.log(this); // Output: the DOM element targeted by the event
+});
+```
+
+#### Changing the Value of `this`
+
+```javascript
+function greet() {
+  console.log("Hello, " + this.name);
+}
+
+let person1 = { name: "Alice" };
+let person2 = { name: "Bob" };
+
+greet.call(person1); // Output: "Hello, Alice"
+greet.call(person2); // Output: "Hello, Bob"
 ```
 
 ### Constructor and "new" Operator
 
-Constructors are used to create objects. The `new` operator is used to create an
-instance of an object.
+Constructors are functions used to create objects with a specific structure and
+behavior. The `new` operator is used to create an instance of an object using a
+constructor.
+
+In constructors, the `this` keyword refers to the instance of the object being
+created.
 
 Example:
 
 ```javascript
-function User(name) {
-  this.name = name;
+function User(name, age) {
+  this.name = name; // 'this' refers to the instance of User
+  this.age = age;
 }
 
-var user = new User("John");
-console.log(user.name); // John
+var user = new User("John", 30);
+
+console.log(user.name); // Output: "John"
+console.log(user.age); // Output: 30
+```
+
+In the above example, `this` refers to the object that's being created by the
+constructor function. It allows you to set properties on the object, which can
+then be accessed using the dot notation.
+
+### Arrow Functions
+
+Arrow functions provide a shorter syntax for writing functions.
+
+Here's an example of a function written the "regular way":
+
+```javascript
+function add(a, b) {
+  return a + b;
+}
+```
+
+Here's the same function using an arrow function:
+
+```javascript
+const add = (a, b) => {
+  a + b;
+};
 ```
