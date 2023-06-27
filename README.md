@@ -58,6 +58,7 @@
 - [Why Should I Learn JavaScript?](#why-should-i-learn-javascript)
 - [Types of Values](#types-of-values)
 - [Type Conversion](#type-conversion)
+- [User Interaction](#user-interaction)
 - [Operators](#operators)
 - [Modifying Variables in Place](#modifying-variables-in-place)
 - [Comparisons](#comparisons)
@@ -1307,6 +1308,63 @@ Using `parseFloat()` to parse a floating-point number from a string:
 let numberString = "3.14";
 let floatNumber = parseFloat(numberString); // 3.14
 ```
+
+### User Interaction
+
+In JavaScript, the `alert`, `prompt`, and `confirm` functions are commonly used
+to interact with users through dialog boxes.
+
+#### `alert`
+
+The `alert` function displays a message to the user in a dialog box. It is
+useful for showing information or notifications.
+
+Example:
+
+```javascript
+alert("Hello, World!");
+```
+
+The above code displays a dialog box with the message "Hello, World!".
+
+#### `prompt`
+
+The `prompt` function displays a dialog box with an input field. It allows the
+user to enter a value and returns that value as a string.
+
+Example:
+
+```javascript
+let name = prompt("Please enter your name:");
+console.log("Hello, " + name);
+```
+
+In the above code, the `prompt` function displays a dialog box with the message
+"Please enter your name:". The value entered by the user is stored in the `name`
+variable, which is then used to display a personalized greeting in the console.
+
+#### `confirm`
+
+The `confirm` function displays a dialog box with a message and two buttons:
+"OK" and "Cancel". It is used to get a yes or no response from the user. The
+function returns `true` if the user clicks "OK" and `false` if the user clicks
+"Cancel".
+
+Example:
+
+```javascript
+let result = confirm("Are you sure you want to delete this item?");
+if (result) {
+  console.log("Item deleted.");
+} else {
+  console.log("Deletion canceled.");
+}
+```
+
+In the above code, the `confirm` function displays a dialog box with the message
+"Are you sure you want to delete this item?". If the user clicks "OK", the
+message "Item deleted." is displayed in the console. If the user clicks
+"Cancel", the message "Deletion canceled." is displayed.
 
 ### Operators
 
