@@ -234,7 +234,7 @@ Here's an example workflow combining the commands above:
 ```sh
 mkdir my_project              # Create a new directory named "my_project"
 cd my_project                 # Change directory to the newly created directory
-echo "Hello, World!" > hello.txt  # Create a new file named "hello.txt" and write "Hello, World!" into it
+touch hello.text              # Create a new file named "hello.txt"
 cd ..                         # Go back to the parent directory
 mkdir another_directory       # Create another directory named "another_directory"
 mv my_project/hello.txt another_directory/  # Move the hello.txt file from my_project to another_directory
@@ -365,14 +365,23 @@ for development and merge them back to the `main` branch upon completion.
 Example:
 
 ```sh
-git checkout -b feature-branch   # Create and switch to a new branch named "feature-branch"
+# Create and switch to a new branch named "feature-branch"
+git checkout -b feature-branch
 
-touch file  # Make changes
-git add . # Stage
-git commit -m "message" # Commit
+# Make changes
+touch file
 
-git checkout main                # Switch back to the main branch
-git merge feature-branch         # Merge the feature branch into the main branch
+# Stage
+git add .
+
+# Commit
+git commit -m "message"
+
+# Switch back to the main branch
+git checkout main
+
+# Merge the feature branch into the main branch
+git merge feature-branch
 ```
 
 This example demonstrates how to create a new branch, switch to it, make
@@ -402,19 +411,56 @@ creating websites.
 
 ### Document Structure
 
-An HTML document has a specific structure that includes `<!DOCTYPE html>`,
-`<html>`, `<head>`, and `<body>` elements.
+An HTML document follows a specific structure that includes various elements for
+organizing and presenting content. Here's an expanded explanation of each
+element:
 
-- **`<!DOCTYPE html>`**: Declares the document type and version of HTML.
-- **`<html>`**: The root element that contains all the content of the document.
-- **`<head>`**: Contains meta-information about the document such as its title.
-- **`<body>`**: Contains the content that is visible to users.
+- **`<!DOCTYPE html>`**: This declaration specifies the document type and
+  version of HTML being used. It ensures that the browser renders the document
+  correctly.
+
+- **`<html>`**: The `<html>` element serves as the root element of the HTML
+  document. It contains all the other elements and represents the entire content
+  of the webpage.
+
+- **`<head>`**: The `<head>` element is a container for meta-information about
+  the document. It doesn't directly display any content on the webpage but
+  includes elements like `<title>`, `<meta>`, and `<link>`. Here are some
+  commonly used elements within the `<head>` section:
+
+  - **`<title>`**: The `<title>` element sets the title of the webpage, which
+    appears in the browser's title bar or tab.
+
+    ```html
+    <head>
+      <title>My Web Page</title>
+    </head>
+    ```
+
+  - **`<meta>`**: The `<meta>` element provides metadata about the HTML
+    document. It includes information such as character encoding, author,
+    description, keywords, and viewport settings. Here's an example of a
+    viewport meta tag:
+
+    ```html
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    ```
+
+    The above `<meta>` tag sets the initial scale and width of the webpage to
+    match the device's screen width.
+
+- **`<body>`**: The `<body>` element contains the visible content of the
+  webpage, such as text, images, links, and other HTML elements. It represents
+  the main content area that users see and interact with.
 
 ```html
 <!DOCTYPE html>
 <html>
   <head>
     <title>My Web Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
     <!-- Visible content goes here -->
@@ -424,39 +470,167 @@ An HTML document has a specific structure that includes `<!DOCTYPE html>`,
 
 ### Inline vs Block Elements
 
-**Inline Elements**: Do not start on a new line and only take up as much width
-as necessary. Example: `<span>`, `<a>`.
+HTML elements can be categorized as either inline or block elements, each with
+different rendering and layout behavior. Here are more examples of commonly used
+inline and block elements:
+
+**Inline Elements**: Inline elements do not start on a new line and only occupy
+as much width as necessary.
+
+- `<span>`: The `<span>` element is an inline container used to group inline
+  elements and apply styles or scripts to specific sections of text.
 
 ```html
-This is <span>inline</span> element.
+This is an <span>inline</span> element.
 ```
 
-**Block Elements**: Start on a new line and take up the full width available.
-Example: `<div>`, `<h1>`, `<p>`.
+- `<a>`: The `<a>` element creates a hyperlink to another webpage or a specific
+  location within the same webpage.
+
+```html
+Visit our <a href="https://www.example.com">website</a> for more information.
+```
+
+**Block Elements**: Block elements start on a new line and occupy the full width
+available.
+
+- `<div>`: The `<div>` element is a generic container used to group and style
+  other HTML elements.
 
 ```html
 <div>This is a block element.</div>
 ```
 
-### Semantic HTML
-
-Semantic HTML elements are those that clearly describe their meaning in a human
-and machine-readable way. Examples include `<header>`, `<footer>`, `<article>`,
-and `<section>`. Using semantic tags helps improve the structure and
-accessibility of web content.
+- `<h1>` to `<h6>`: Heading elements represent section headings of different
+  levels, with `<h1>` being the highest and `<h6>` being the lowest.
 
 ```html
-<article>
-  <header>
-    <h1>Article Title</h1>
-  </header>
-  <section>
-    <p>Content of the article...</p>
-  </section>
-  <footer>
-    <p>Article footer.</p>
-  </footer>
-</article>
+<h1>Main Heading</h1>
+<h2>Subheading</h2>
+```
+
+- `<p>`: The `<p>` element represents a paragraph of text.
+
+```html
+<p>This is a paragraph.</p>
+```
+
+**Block Elements:**
+
+- `<div>`
+- `<p>`
+- `<h1>` to `<h6>`
+- `<ul>` (unordered list)
+- `<ol>` (ordered list)
+- `<li>` (list item)
+- `<table>`
+- `<tr>` (table row)
+- `<td>` (table cell)
+- `<th>` (table header cell)
+- `<form>`
+- `<blockquote>`
+- `<pre>`
+- `<address>`
+- `<header>`
+- `<nav>`
+- `<main>`
+- `<article>`
+- `<section>`
+- `<aside>`
+- `<footer>`
+- `<figure>`
+- `<figcaption>`
+- `<hr>` (horizontal rule)
+- `<fieldset>`
+
+**Inline Elements:**
+
+- `<span>`
+- `<a>`
+- `<strong>` or `<b>` (bold text)
+- `<em>` or `<i>` (italicized text)
+- `<code>`
+- `<cite>`
+- `<q>` (short inline quotation)
+- `<abbr>` (abbreviation)
+- `<sup>` (superscript)
+- `<sub>` (subscript)
+- `<time>` (date or time)
+- `<img>`
+- `<input>`
+- `<label>`
+- `<button>`
+- `<select>`
+- `<option>`
+- `<textarea>`
+- `<dfn>` (definition term)
+- `<mark>`
+- `<small>`
+- `<del>` (deleted text)
+- `<ins>` (inserted text)
+- `<s>` (strikethrough)
+- `<var>` (variable)
+
+### Semantic HTML
+
+Semantic HTML elements provide meaning and structure to the content, making it
+more understandable for both humans and machines. They convey the purpose and
+role of different sections of a webpage. Here are seven examples of semantic
+HTML elements:
+
+- `<header>`: Represents the introductory content at the top of a webpage or a
+  section.
+- `<nav>`: Defines a section of navigation links.
+- `<article>`: Represents an independent, self-contained piece of content, such
+  as a blog post or news article.
+- `<section>`: Represents a standalone section of content.
+- `<aside>`: Defines content that is tangentially related to the main content,
+  such as sidebars or pull quotes.
+- `<footer>`: Represents the footer or closing section of a webpage or a
+  section.
+- `<main>`: Defines the main content area of the document.
+
+Here's an example that demonstrates the usage of these semantic elements
+together:
+
+```html
+<header>
+  <h1>Website Title</h1>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <article>
+    <header>
+      <h2>Article Title</h2>
+    </header>
+    <section>
+      <p>Content of the article...</p>
+    </section>
+    <footer>
+      <p>Article footer.</p>
+    </footer>
+  </article>
+
+  <aside>
+    <h3>Related Articles</h3>
+    <ul>
+      <li><a href="#">Article 1</a></li>
+      <li><a href="#">Article 2</a></li>
+      <li><a href="#">Article 3</a></li>
+    </ul>
+  </aside>
+</main>
+
+<footer>
+  <p>&copy; 2023 My Website. All rights reserved.</p>
+</footer>
 ```
 
 ### Headings and Paragraphs
@@ -1048,26 +1222,64 @@ even desktop applications.
 
 ### Types of Values
 
-JavaScript has various types of values, including:
+In JavaScript, there are different types of values that can be used to represent
+various kinds of data. These types include:
 
-- **Number**: Represents numeric values. e.g., `5`, `3.14`.
-- **String**: Represents a sequence of characters. e.g., `"hello"`.
-- **Boolean**: Represents a true or false value. **Object**: Represents a
-  collection of key-value pairs.
-- **Array**: Represents an ordered list of values.
-- **Function**: Represents a reusable set of statements.
-- **Null**: Represents an intentional absence of any value or object.
-- **Undefined**: Represents a variable that has not been assigned a value.
+- **Number**: This type represents numeric values. Examples of number values
+  include integers like 5 and floating-point numbers like 3.14.
+
+- **String**: The string type represents a sequence of characters. Strings are
+  enclosed in single quotes ('') or double quotes (""). For example, "hello" is
+  a string.
+
+- **Boolean**: The boolean type represents a logical value that can be either
+  true or false. It is often used for conditional statements and comparisons.
+
+- **Object**: The object type represents a collection of key-value pairs.
+  Objects in JavaScript are versatile and can hold various types of data and
+  functionality.
+
+- **Array**: Arrays are a type of object in JavaScript and represent an ordered
+  list of values. They can store multiple values of any type, including numbers,
+  strings, objects, and even other arrays.
+
+- **Function**: Functions are reusable blocks of code that can be called to
+  perform a specific task. They are objects themselves and can be assigned to
+  variables, passed as arguments, and returned from other functions.
+
+- **Null**: Null is a special value that represents the intentional absence of
+  any object value. It is often used to indicate the absence of a valid value.
+
+- **Undefined**: When a variable is declared but has not been assigned a value,
+  its type is undefined. It signifies that the variable has not been
+  initialized.
 
 Example:
 
 ```javascript
-let num = 42; // Number
-let text = "hello"; // String
-let isActive = false; // Boolean
-let obj = {}; // Object
-let arr = [1, 2, 3]; // Array
+// Number
+let num = 42;
+
+// String
+let text = "hello";
+
+// Boolean
+let isActive = false;
+
+// Object
+let obj = {};
+
+// Array
+let arr = [1, 2, 3];
 ```
+
+Each variable is declared and assigned a value of a specific type:
+
+- `num` is assigned the number value 42.
+- `text` is assigned the string value "hello".
+- `isActive` is assigned the boolean value false.
+- `obj` is assigned an empty object.
+- `arr` is assigned an array containing the numbers 1, 2, and 3.
 
 ### Type Conversion
 
@@ -1075,8 +1287,8 @@ In JavaScript, type conversion is the process of converting values from one data
 type to another. This can happen automatically (implicit conversion) or be
 performed explicitly using certain functions.
 
-Example of implicit conversion: When you add a number and a string, JavaScript
-converts the number to a string and concatenates them.
+When you add a number and a string, JavaScript converts the number to a string
+and concatenates them. This is called `implicit conversion`:
 
 ```javascript
 let result = 5 + "7"; // "57" as a string, not 12
@@ -1098,34 +1310,42 @@ let floatNumber = parseFloat(numberString); // 3.14
 
 ### Operators
 
-- **Operand**: The value that the operator operates on.
-- **Unary Operator**: Operates on a single operand. e.g., `!true` (logical NOT),
-  `-x` (negation).
-- **Binary Operator**: Operates on two operands. e.g., `x + y` (addition),
-  `x < y` (less than).
+Operators in JavaScript perform operations on operands, which are the values the
+operators work with. There are two main categories of operators:
 
-Example:
+- **Unary Operators**: These operators operate on a single operand.
+
+  - Examples of unary operators include `!` (logical NOT) and `-` (negation).
+  - Unary operators are applied to a single value to perform a specific
+    operation.
+
+- **Binary Operators**: These operators operate on two operands.
+  - Examples of binary operators include `+` (addition) and `<` (less than).
+  - Binary operators take two values and perform a specified operation between
+    them.
 
 ```javascript
 let x = 10;
 let y = 5;
 
-// Unary
-let negativeX = -x; // -10
+// Unary Operator
+let negativeX = -x; // Result: -10
 
-// Binary
-let sum = x + y; // 15
+// Binary Operator
+let sum = x + y; // Result: 15
 ```
 
 ### Modifying Variables in Place
 
-You can modify variables in place using various operators:
+JavaScript provides several operators that allow you to modify variables in
+place. These operators make it convenient to update the value of a variable
+without reassigning it completely. Some commonly used operators for modifying
+variables in place are:
 
-- `++` : Increment
-- `--` : Decrement
-- `+=`, `-=`: Change value in place
-
-Example:
+- `++`: Increment the value by 1.
+- `--`: Decrement the value by 1.
+- `+=`, `-=`: Change the value in place by adding or subtracting a specific
+  value.
 
 ```javascript
 let counter = 0;
@@ -1136,29 +1356,58 @@ counter += 5; // Increase by 5
 
 ### Comparisons
 
-Comparison operators are used to compare values:
+Comparison operators in JavaScript are used to compare values and evaluate the
+relationship between them. Here's an explanation of each comparison operator:
 
-- `==`: Equality (does not check the type)
-- `===`: Strict equality (checks both value and type)
-- `<`, `>`, `<=`, `>=`: Comparisons
+- `==`: The equality operator checks if the values on both sides are equal. It
+  does not perform strict type checking and can result in type coercion. For
+  example, `1 == "1"` would be considered true because the values are equal
+  after type coercion.
 
-##### Example:
+- `===`: The strict equality operator checks if the values on both sides are
+  equal and also checks their types. It does not perform type coercion and
+  requires both the value and type to be the same for equality. For example,
+  `1 === "1"` would be considered false because the types are different.
+
+- `<`: The less than operator checks if the value on the left side is strictly
+  less than the value on the right side. For example, `5 < 10` would be
+  considered true because 5 is less than 10.
+
+- `>`: The greater than operator checks if the value on the left side is
+  strictly greater than the value on the right side. For example, `10 > 5` would
+  be considered true because 10 is greater than 5.
+
+- `<=`: The less than or equal to operator checks if the value on the left side
+  is less than or equal to the value on the right side. For example, `5 <= 5`
+  would be considered true because 5 is equal to 5.
+
+- `>=`: The greater than or equal to operator checks if the value on the left
+  side is greater than or equal to the value on the right side. For example,
+  `10 >= 10` would be considered true because 10 is equal to 10.
+
+Here's an example that demonstrates the use of a comparison operator:
 
 ```javascript
 let age = 30;
 
-if (age >= 18) {
-  console.log("Adult");
-} else {
-  console.log("Minor");
-}
+console.log(age >= 18); // Output: true
+
+let number = 0;
+let string = "0";
+
+console.log(number == string); // Output: true (value is the same, type is different)
+console.log(number === string); // Output: false (type is different)
 ```
 
-##### Strict Comparison Example:
+In the example above, the code checks if the `age` variable is greater than or
+equal to 18 using the `>=` operator. If the condition is true, it prints
+"Adult". Otherwise, it prints "Minor".
 
-It's often a good practice to use strict equality (`===`) to avoid unexpected
-type coercion. Here's an example that illustrates the difference between `==`
-and `===`.
+#### Strict Comparison
+
+It's often recommended to use strict equality (`===`) to avoid unexpected type
+coercion. Here's an example that illustrates the difference between `==` and
+`===`:
 
 ```javascript
 let number = 0;
@@ -1168,33 +1417,11 @@ console.log(number == string); // Output: true (value is the same, type is diffe
 console.log(number === string); // Output: false (type is different)
 ```
 
-In the example above, `==` only compares the values and performs type coercion
-(converts the string "0" to the number 0). In contrast, `===` compares both
-value and type, so a string and a number are considered unequal even if they
-look the same.
-
-### Conditionals
-
-Conditionals are used to make decisions in code:
-
-- `if`: Execute block if the condition is true.
-- `else if`: Execute block if the previous condition was false and the current
-  condition is true.
-- `else`: Execute block if none of the above conditions is true.
-
-Example:
-
-```javascript
-let score = 85;
-
-if (score >= 90) {
-  console.log("A");
-} else if (score >= 80) {
-  console.log("B");
-} else {
-  console.log("C");
-}
-```
+In the above example, the `==` operator compares the values and performs type
+coercion to make them match. As a result, `number == string` is considered true
+because the values are the same after type coercion. However, the `===` operator
+compares both the value and the type, and since the types are different,
+`number === string` is considered false.
 
 ### Loops
 
@@ -1233,10 +1460,13 @@ do {
 Functions are reusable blocks of code that can be defined once and used multiple
 times:
 
-**Declaration**: Define a function using the `function` keyword. **Parameters**:
-The inputs to the function. **Return**: Send a value back to the caller. **Local
-variables**: Variables defined inside the function - not accessible outside.
-**Outer variables**: Variables defined outside the function - accessible inside.
+- **Declaration**: Define a function using the `function` keyword.
+- **Parameters**: The inputs to the function.
+- **Return**: Send a value back to the caller.
+- **Local variables**: Variables defined inside the function - not accessible
+  outside.
+- **Outer variables**: Variables defined outside the function - accessible
+  inside.
 
 Example:
 
@@ -1401,7 +1631,7 @@ button.addEventListener("click", function () {
 });
 ```
 
-#### Changing the Value of `this`
+#### See how the value of `this` can change
 
 ```javascript
 function greet() {
