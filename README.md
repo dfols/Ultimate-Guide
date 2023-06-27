@@ -1542,9 +1542,7 @@ not a valid identifier.
 
 ```javascript
 console.log(person["age"]); // Output: 25
-
-let propertyName = "name";
-console.log(person[propertyName]); // Output: "John"
+console.log(person["name"]); // Output: "John"
 ```
 
 #### Adding Functions to Objects
